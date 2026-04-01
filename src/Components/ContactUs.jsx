@@ -59,7 +59,7 @@ export default function ContactUs() {
                             target="_blank" 
                             className="block mt-4 text-center bg-yellow-500 text-white py-3 rounded-xl hover:bg-yellow-600 transition"
                         >
-                            Chat on WhatsApp 
+                            Chat On WhatsApp 
                         </a>
 
                     </div>
