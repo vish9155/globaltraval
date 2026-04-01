@@ -14,31 +14,31 @@ import { ArrowRight } from 'lucide-react';
 export default function TrendingDestination() {
   let trendingDestination = [
   {
-    img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80"
+    img: "/images/Australia.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80"
+    img: "/images/Mexico.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+    img: "/images/Japan.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80"
+    img: "/images/Germany.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80"
+    img: "/images/France.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80"
+    img: "/images/Brazil.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80"
+    img: "/images/Canada.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80"
+    img: "/images/United Kingdom.jpg.jpeg"
   },
   {
-    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"
+    img: "/images/United Arab Emirates.jpg.jpeg"
   }
 ];
     return (
@@ -66,13 +66,13 @@ export default function TrendingDestination() {
                     >
                         {
                             trendingDestination.map((item, id) => (
-                                <SwiperSlide className="relative overflow-hidden group rounded border">
+                                <SwiperSlide className="relative overflow-hidden group rounded-t-full rounded-b-full border border-white/5 bg-white/5 backdrop-blur-md">
 
                                     {/* Image */}  
                                     <img
                                         src={item.img}
                                         alt={item.title}
-                                        className="h-[240px] w-[353px] object-cover transition duration-500 group-hover:scale-110"
+                                        className="h-full w-full rounded-t-full rounded-b-full object-cover transition duration-500 group-hover:scale-110"
                                     />
 
                                     {/* Overlay (hidden by default) */}

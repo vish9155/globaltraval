@@ -5,6 +5,7 @@ import Footer from './Components/Footer'
 import HomePage from './Pages/HomePage'
 import Loader from './Components/Loader'
 
+
 export default function App() {
   let [loading, setLoading] = useState(true)
   let About = lazy(() => import('./Pages/AboutPage'))
@@ -14,6 +15,7 @@ export default function App() {
   let Disclaimers = lazy(() => import('./Pages/policies/Disclaimers'))
   let Contact = lazy(() => import('./Components/ContactUs'))
   let Faq = lazy(() => import('./Components/Faq'))
+  let Package=lazy(() => import('./Components/Packages'))
   let Services = lazy(() => import('./Components/OurServices'))
   useEffect(() => {
     // AOS.init({ duration: 1000, once: true });
@@ -36,6 +38,7 @@ export default function App() {
             <Route path='/refund-policy' element={<RefundPolicy />} />
             <Route path='/disclaimer' element={<Disclaimers />} />
             <Route path='/faq' element={<Faq />} />
+            <Route path='/packages' element={<Package />} />
             <Route path='/services' element={<Services />} />
           </Routes>
         </Suspense>

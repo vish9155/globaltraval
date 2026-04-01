@@ -16,8 +16,8 @@ export default function PremiumSpecials() {
 
         {/* LEFT SMALL CARD */}
         <div className="relative rounded-2xl overflow-hidden group border">
-          <img src=""
-            // src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800"
+          <img src="/images/"
+           
             className="w-[403px] h-[300px]  group-hover:scale-110 transition duration-500"
           />
           <div className="absolute inset-0 "></div>
@@ -47,8 +47,8 @@ export default function PremiumSpecials() {
             className="mySwiper1 h-full"
           >
             {[
-              "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=1200",
-              "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=1200",
+              "/images/Universal Studios 828x300.jpg.jpeg",
+              "/images/Singapore 828x300.jpg.jpeg",
             ].map((img, i) => (
               <SwiperSlide key={i}>
                 <div className="relative h-full group border">
@@ -82,7 +82,7 @@ export default function PremiumSpecials() {
         {/* BOTTOM BIG CARD */}
         <div className="relative col-span-1 md:col-span-2 rounded-2xl overflow-hidden border group">
           <img
-            src= "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=1200"            className="w-[828px] h-[300px]  object-cover group-hover:scale-110 transition duration-500"
+            src= "/images/Tour Packages 828x300.jpg.jpeg"            className="h-full w-full  object-cover group-hover:scale-110 transition duration-500"
           />
 
           <div className="absolute inset-0 "></div>
@@ -105,19 +105,19 @@ export default function PremiumSpecials() {
         {[
           {
             title: "Build Your Own Itinerary",
-            img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+            img: "/images/Build Your Own Itinerary.jpg.jpeg",
           },
           {
             title: "Looking for Hotels?",
-            img: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=800",
+            img: "/images/Hotel.jpg.jpeg",
           },
           {
             title: "Looking for Flights?",
-            img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800",
+            img: "/images/flight.jpg.jpeg",
           },
           {
             title: "Looking for Cars?",
-            img: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800",
+            img: "/images/car.jpg.jpeg",
           },
           
         ].map((item, i) => (

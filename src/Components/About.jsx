@@ -1,5 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Testimonials from './Testimonials'
+import Faq from './Faq'
+import OurServices from './OurServices'
+import WhyChosseus from './WhyChosseus'
+import ExperienceWithExpert from './ExperienceWithExpert'
+import MissionVision from './OurMission'
 
 export default function About() {
   return (
@@ -36,11 +42,19 @@ export default function About() {
                          <NavLink className={'p-4  px-8 text-white bg-yellow-600 rounded-full '}>Search flights</NavLink>
                        </div>
                     </div>
-                    <div className='order-2 md:order-2 relative group overflow-hidden border border-amber-300'>
-             <img src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp" className='h-[430px] w-[620px] group-hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer' alt="" />
+                    <div className='order-2 md:order-2 relative group overflow-hidden rounded-xl bg-white/5 border-white/5 backdrop-blur-md'>
+             <img src="/images/About us Intro.jpg.jpeg" className='h-full w-full group-hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer' alt="" />
                     </div>
                 </div>
             </section>
+            
+            <ExperienceWithExpert />
+               <MissionVision />
+             <WhyChosseus />
+            <Faq />
+            <Testimonials />
+        
+            <OurServices />
    </>
   )
 }

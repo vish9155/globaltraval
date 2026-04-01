@@ -37,13 +37,18 @@ export default function Faq() {
           <input type="text" placeholder='ask your questions' onChange={(e)=>setSearch(e.target.value)} className='w-full outline-amber-300 border border-amber-300 items-center mx-auto p-4 rounded-full mt-5 ' />
         </div>
         </header>
-       
-        <div className='max-w-7xl mx-auto py-5 px-4'>
+         {filterdata.length === 0 && (
+            <p className="text-center text-gray-700">
+              No results found
+            </p>
+          )}
+        <div className='max-w-7xl mx-auto  px-4'>
           <h1 className='text-center text-xl sm:text-2xl md:text-3xl p-3 sm:p-4 md:p-5 '>Frequntly Asked Questions</h1>
           <div className='text-center m-auto'>
             {
               tabs.map((item, id) => (
-                <button key={id} onClick={() => setTab(item.key)} className={`cursor-pointer  text-center p-1 sm:p-2 md:p-3 text-white rounded gap-10 ms-5 mt-3 ${item.key === tab ? 'bg-yellow-400 transition duration-300 cursor-pointer' : 'bg-yellow-700/90'}`}>
+                <button key={id} onClick={() => setTab(item.key)} className={`cursor-pointer  text-center p-1 sm:p-2 md:p-3 text-white rounded gap-10 ms-5 mt-3 ${item.key === tab ?"bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-lg scale-105"
+                  : "bg-white/10 hover:bg-white/20"}`}>
                   {item.label}
                 </button>
               ))
@@ -58,7 +63,7 @@ export default function Faq() {
               filterdata?.map((item, id) => {
                 let openIndex = open === id
                 return (
-                  <div key={id} className='border border-amber-300 rounded-2xl overflow-hidden '>
+                  <div key={id} className='bg-white/5 border border-white/10  backdrop-blur-md rounded-2xl overflow-hidden '>
                     <button className={`flex items-center justify-between p-4 md:p-5 text-left w-full ${openIndex ? "bg-yellow-600 text-white" : ""}`} onClick={() => setOpen(openIndex ? null : id)}>
 
                       <h3 className=''>{item.question}</h3>

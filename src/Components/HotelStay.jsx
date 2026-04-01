@@ -16,39 +16,42 @@ import { ArrowRight } from 'lucide-react';
 export default function HotelStay() {
     let trendingDestination = [
         {
-            img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
-            title: "vishal"
+            img: "/images/1 Hotel South Beach.jpg.jpeg",
+            title: "1 Hotel South Beach"
         },
         {
-            img: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80",
-            title: "vishal"
+            img: "/images/Acqualina Resort & Residences 828x300.jpg.jpeg",
+            title: "Acqualina Resort & Residences"
         },
         {
-            img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+            img: "/images/Baccarat Hotel New York.jpg.jpeg",
+            title:"Baccarat Hotel"
 
         },
         {
-            img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80",
-            title: "vishal"
+            img: "/images/Amangiri hotel.jpg.jpeg",
+            title: "Amangiri hotel"
         },
         {
-            img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
-            title: "vishal"
+            img: "/images/Nobu Hotel Chicago.jpg.jpeg",
+            title: "Nobu Hotel Chicago"
         },
         {
-            img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+            img: "/images/The Beverly Hills Hotel.jpg.jpeg",
+            title:"The Beverly Hills Hotel"
 
         },
         {
-            img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
-            title: "vishal"
+            img: "/images/The Venetian Resort.jpg.jpeg",
+            title: "The Venetian Resort"
         },
         {
-            img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
-            title: "vishal"
+            img: "/images/LondonHouse Chicago.jpg.jpeg",
+            title: "LondonHouse Chicago"
         },
         {
-            img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"
+            img: "/images/The Plaza Hotel.jpg.jpeg",
+            title:"The Plaza Hotel"
         }
     ];
     return (
@@ -81,7 +84,7 @@ export default function HotelStay() {
                                         <img
                                             src={item.img}
                                             alt={item.title}
-                                            className="h-[240px] w-[353px] object-cover transition duration-500 group-hover:scale-110"
+                                            className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                                         />
                                         <h2 className='absolute bottom-2 left-2 text-base text-white font-semibold'>{item.title}</h2>
                                         <NavLink
