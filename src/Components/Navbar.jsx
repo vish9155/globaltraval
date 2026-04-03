@@ -9,13 +9,14 @@ export default function Navbar() {
     { title: "Home", path: "/" },
     { title: "Flights", path: "/flights" },
     { title: "Hotels", path: "/hotels" },
+    { title: "Cars", path: "/cars" },
     { title: "Cruise", path: "/cruise" },
     { title: "Packages", path: "/packages" },
-    { title: "About Us", path: "/about-us" },
+    
   ];
 
   return (
-    <section className="w-full  z-50 backdrop-blur-md bg-yellow-300 text-white shadow-lg">
+    <section className="w-full  z-50 backdrop-blur-md bg-[#0F172A] text-white shadow-lg">
       
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-20">
         
@@ -26,15 +27,15 @@ export default function Navbar() {
            Global Travel
         </NavLink>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-12">
           {navbar.map((item, id) => (
             <NavLink
               key={id}
               to={item.path}
               className={({ isActive }) =>
-                `relative font-medium transition duration-300 ${
-                  isActive ? "text-black" : "text-white"
-                } hover:text-black`
+                `relative font-medium transition hover:text-[#F8FAFC]  duration-300 ${
+                  isActive ? "text-white hover:text-[#D97706]" : "text-[#F59E0B]"
+                } `
               }
             >
               {item.title}
@@ -47,7 +48,7 @@ export default function Navbar() {
          
           <NavLink
             to="/booking"
-            className="bg-yellow-600 hover:bg-yellow-700 px-6 py-2 rounded-full font-semibold transition duration-300 shadow-md hover:scale-105"
+            className="bg-[#F59E0B] hover:bg-[#D97706] text-white px-6 py-2 rounded-full font-semibold transition duration-300 shadow-md hover:scale-105"
           >
             Book Now
           </NavLink>

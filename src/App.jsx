@@ -1,9 +1,12 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import HomePage from './Pages/HomePage'
 import Loader from './Components/Loader'
+import Marquee from './Components/Marquee'
 
 
 export default function App() {
@@ -14,11 +17,12 @@ export default function App() {
   let RefundPolicy = lazy(() => import('./Pages/policies/Refund_Policy'))
   let Disclaimers = lazy(() => import('./Pages/policies/Disclaimers'))
   let Contact = lazy(() => import('./Components/ContactUs'))
-  let Faq = lazy(() => import('./Components/Faq'))
+ let Flights = lazy(() => import('./Components/Flights'))
+ let Hotels = lazy(() => import('./Components/Hotels'))
   let Package=lazy(() => import('./Components/Packages'))
   let Services = lazy(() => import('./Components/OurServices'))
   useEffect(() => {
-    // AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: true });
     let timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
@@ -37,11 +41,13 @@ export default function App() {
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/refund-policy' element={<RefundPolicy />} />
             <Route path='/disclaimer' element={<Disclaimers />} />
-            <Route path='/faq' element={<Faq />} />
+            <Route path='/flights' element={<Flights />} />
+           <Route path='/hotels' element={<Hotels />} />
             <Route path='/packages' element={<Package />} />
             <Route path='/services' element={<Services />} />
           </Routes>
         </Suspense>
+        {/* <Marquee /> */}
         <Footer />
       </BrowserRouter>
     </>

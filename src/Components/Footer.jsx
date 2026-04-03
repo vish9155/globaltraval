@@ -50,7 +50,7 @@ export default function Footer() {
                         <NavLink to="/privacy-policy" className="block hover:text-black">Privacy Policy</NavLink>
                         <NavLink to="/terms-conditions" className="block hover:text-black">Terms & Conditions</NavLink>
                         <NavLink to="/refund-policy" className="block hover:text-black">Refund Policy</NavLink>
-                        <NavLink to="/faq" className="block hover:text-black">FAQ</NavLink>
+                        <NavLink to="/contact-us" className="block hover:text-black">Contact Us</NavLink>
                         <NavLink to="/disclaimer" className="block hover:text-black">Disclaimer</NavLink>
                         <NavLink to="/services" className="block hover:text-black">Services</NavLink>
                     </div>
