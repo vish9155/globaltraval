@@ -1,163 +1,3 @@
-// import React, { useState } from 'react'
-// import DatePicker from 'react-datepicker'
-// import "react-datepicker/dist/react-datepicker.css";
-// import { MapPin, CalendarDays, Users } from 'lucide-react'
-// import { motion } from 'framer-motion'
-
-// export default function Hotels() {
-
-//   // Date Range
-//   const [dateRange, setDateRange] = useState([new Date(), null])
-//   const [startDate, endDate] = dateRange
-
-//   // Location
-//   const [location, setLocation] = useState("")
-//   const [showSuggestions, setShowSuggestions] = useState(false)
-
-//   const locations = ["Delhi", "Mumbai", "Goa", "Bangalore", "Jaipur", "Dubai", "London"]
-
-//   const filteredLocations = locations.filter(item =>
-//     item.toLowerCase().includes(location.toLowerCase())
-//   )
-
-//   // Guests
-//   const [guestOpen, setGuestOpen] = useState(false)
-//   const [guests, setGuests] = useState({
-//     adults: 2,
-//     children: 0,
-//     rooms: 1
-//   })
-
-//   const updateGuest = (type, value) => {
-//     setGuests(prev => ({
-//       ...prev,
-//       [type]: Math.max(0, prev[type] + value)
-//     }))
-//   }
-
-//   return (
-//     <section className='w-full min-h-screen relative'>
-
-//       {/* Background */}
-//       <img 
-//         src="/images/LondonHouse Chicago 828x300.jpg.jpeg"
-//         className='w-full h-[500px] object-cover brightness-75'
-//         alt=""
-//       />
-
-//       <div className='absolute inset-0 bg-black/30'></div>
-
-//       {/* Booking Card */}
-//       <div className='absolute bottom-20 w-full flex justify-center px-4'>
-
-//         <motion.div 
-//           initial={{ opacity: 0, y: 40 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className='w-full max-w-6xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 flex flex-col md:flex-row gap-4 items-center'
-//         >
-
-//           {/* Location */}
-//           <div className='relative w-full'>
-//             <div className='flex items-center gap-2 bg-white rounded-xl px-4 py-3'>
-//               <MapPin size={18} className='text-gray-500' />
-//               <input
-//                 value={location}
-//                 onChange={(e) => {
-//                   setLocation(e.target.value)
-//                   setShowSuggestions(true)
-//                 }}
-//                 onFocus={() => setShowSuggestions(true)}
-//                 placeholder='Where are you going?'
-//                 className='w-full outline-none text-sm'
-//               />
-//             </div>
-
-//             {showSuggestions && location && (
-//               <div className='absolute top-full mt-2 w-full bg-white rounded-xl shadow-lg z-50 max-h-40 overflow-y-auto'>
-//                 {filteredLocations.map((item, i) => (
-//                   <div
-//                     key={i}
-//                     onClick={() => {
-//                       setLocation(item)
-//                       setShowSuggestions(false)
-//                     }}
-//                     className='p-3 hover:bg-gray-100 cursor-pointer text-sm'
-//                   >
-//                     {item}
-//                   </div>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-
-//           {/* Date Range */}
-//           <div className='flex items-center gap-2 bg-white rounded-xl px-4 py-3 w-full'>
-//             <CalendarDays size={18} className='text-gray-500' />
-//             <DatePicker
-//               selectsRange={true}
-//               startDate={startDate}
-//               endDate={endDate}
-//               onChange={(update) => setDateRange(update)}
-//               minDate={new Date()}
-//               placeholderText="Check-in — Check-out"
-//               className='outline-none w-full text-sm'
-//             />
-//           </div>
-
-//           {/* Guests */}
-//           <div className='relative w-full'>
-//             <div 
-//               onClick={() => setGuestOpen(!guestOpen)}
-//               className='flex items-center gap-2 bg-white rounded-xl px-4 py-3 cursor-pointer'
-//             >
-//               <Users size={18} className='text-gray-500' />
-//               <span className='text-sm'>
-//                 {guests.adults} Adults • {guests.children} Children • {guests.rooms} Rooms
-//               </span>
-//             </div>
-
-//             {guestOpen && (
-//               <div className='absolute top-full mt-2 w-full bg-white rounded-xl shadow-lg p-4 z-50'>
-
-//                 {["adults", "children", "rooms"].map((type) => (
-//                   <div key={type} className='flex justify-between items-center mb-3'>
-//                     <span className='capitalize text-sm'>{type}</span>
-//                     <div className='flex items-center gap-3'>
-//                       <button 
-//                         onClick={() => updateGuest(type, -1)}
-//                         className='px-3 py-1 bg-gray-200 rounded'
-//                       >-</button>
-//                       <span>{guests[type]}</span>
-//                       <button 
-//                         onClick={() => updateGuest(type, 1)}
-//                         className='px-3 py-1 bg-gray-200 rounded'
-//                       >+</button>
-//                     </div>
-//                   </div>
-//                 ))}
-
-//               </div>
-//             )}
-//           </div>
-
-//           {/* Button */}
-//           <motion.button 
-//             whileHover={{ scale: 1.05 }}
-//             whileTap={{ scale: 0.95 }}
-//             className='w-full md:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg'
-//           >
-//             Search
-//           </motion.button>
-
-//         </motion.div>
-
-//       </div>
-
-//     </section>
-//   )
-// }
-
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
@@ -186,7 +26,7 @@ export default function Hotels() {
             <section className='w-full h-screen relative ' >
                 <img src="/images/LondonHouse Chicago 828x300.jpg.jpeg" className='h-[600px] w-[1920px] object-cover brightness-75' alt="" />
                 <div className='absolute inset-0 bg-black/5'></div>
-                <div className='bg-sky-200/80 absolute bottom-20 w-full py-10 flex flex-col md:flex-row items-center justify-center  gap-6 '>
+                <div className='bg-white/80 absolute bottom-20 w-full py-10 flex flex-col md:flex-row items-center justify-center  gap-6 '>
                     <div className='border rounded-lg flex items-center justify-center px-3'>
                         <MapPin size={24} />
                         <input type="text" name="city" id="city" placeholder='where are going ?' className='rounded-lg p-4 outline-none ' />
@@ -262,8 +102,8 @@ export default function Hotels() {
    
     <div className='relative overflow-hidden rounded-xl'>
       <img 
-        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        src="/images/hotels/New York.jpg.jpeg"
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
       <div className='absolute left-5 top-5'>
@@ -275,8 +115,8 @@ export default function Hotels() {
 
     <div className='relative overflow-hidden rounded-xl '>
       <img 
-        src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        src="/images/hotels/Grand Canyon.jpg.jpeg"
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
        <div className='absolute left-5 top-5'>
@@ -292,8 +132,8 @@ export default function Hotels() {
  
     <div className='relative overflow-hidden rounded-xl '>
       <img 
-        src="https://images.unsplash.com/photo-1582719508461-905c673771fd"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        src="/images/hotels/miami.jpg.jpeg"
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
         <div className='absolute left-5 top-5'>
@@ -304,8 +144,8 @@ export default function Hotels() {
 
     <div className='relative overflow-hidden rounded-xl '>
       <img 
-        src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        src="/images/hotels/Las Vgas.jpg.jpeg"
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
        <div className='absolute left-5 top-5'>
@@ -314,11 +154,11 @@ export default function Hotels() {
       </div>
     </div>
 
-    {/* Last Big Highlight */}
+   
     <div className='relative overflow-hidden rounded-xl  md:col-span-1'>
       <img 
-        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        src="/images/hotels/jackson whole.jpg.jpeg"
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
        <div className='absolute left-5 top-5'>
@@ -329,7 +169,7 @@ export default function Hotels() {
      {/* <div className='overflow-hidden rounded-xl  md:col-span-3'>
       <img 
         src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
-        className='w-full h-[300px] object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
+        className='w-full h-full object-cover hover:scale-110 brightness-75 cursor-pointer transition duration-500'
         alt=""
       />
     </div> */}

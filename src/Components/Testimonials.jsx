@@ -44,7 +44,7 @@ export default function Testimonials() {
 ];
   return (
    <>
-   <section className='bg-yellow-400/40 backdrop-blur-md py-5'>
+   <section className='bg-gradient-to-r from-blue-50 via-sky-100 to-blue-50 backdrop-blur-md py-5'>
     <div className='max-w-8xl mx-auto px-3 py-14'>
        <div>
         <h2 className='text-3xl font-bold text-center text-yellow-800 '>Why Customers Love Global Traval</h2>

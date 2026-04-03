@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <section className="w-full  z-50 backdrop-blur-md bg-[#0F172A] text-white shadow-lg">
+    <section className="w-full  z-50 backdrop-blur-md bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white shadow-lg">
       
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-20">
         

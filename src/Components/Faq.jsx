@@ -25,7 +25,7 @@ export default function Faq() {
   console.log(tab, Selectedfaqdata)
   return (
     <>
-      <section className='w-full px-4 p mx-auto bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800'>
+      <section className='w-full px-4 p mx-auto bg-gradient-to-r from-purple-50 via-indigo-100 to-purple-50'>
         <header className="text-center py-12 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
           Help Center
@@ -48,7 +48,7 @@ export default function Faq() {
             {
               tabs.map((item, id) => (
                 <button key={id} onClick={() => setTab(item.key)} className={`cursor-pointer  text-center p-1 sm:p-2 md:p-3 text-white rounded gap-10 ms-5 mt-3 ${item.key === tab ?"bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-lg scale-105"
-                  : "bg-white/10 hover:bg-white/20"}`}>
+                  : "bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white hover:bg-white/20"}`}>
                   {item.label}
                 </button>
               ))

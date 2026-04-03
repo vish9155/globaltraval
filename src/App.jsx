@@ -19,6 +19,7 @@ export default function App() {
   let Contact = lazy(() => import('./Components/ContactUs'))
  let Flights = lazy(() => import('./Components/Flights'))
  let Hotels = lazy(() => import('./Components/Hotels'))
+  let Cars = lazy(() => import('./Components/Car'))
   let Package=lazy(() => import('./Components/Packages'))
   let Services = lazy(() => import('./Components/OurServices'))
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function App() {
             <Route path='/disclaimer' element={<Disclaimers />} />
             <Route path='/flights' element={<Flights />} />
            <Route path='/hotels' element={<Hotels />} />
+           <Route path='/cars' element={<Cars />} />
             <Route path='/packages' element={<Package />} />
             <Route path='/services' element={<Services />} />
           </Routes>

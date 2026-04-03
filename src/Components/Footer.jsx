@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800 text-white">
+        <footer className="w-full bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white">
 
             {/* Top Section */}
             <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

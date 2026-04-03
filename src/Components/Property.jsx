@@ -14,33 +14,33 @@ import { ArrowRight } from 'lucide-react';
 export default function Property() {
     let property = [
         {
-            img: "/images/1 Hotel South Beach.jpg.jpeg",
+            img: "/images/hotels/Hotels.jpg.jpeg",
             title: "Hotels"
         },
         {
-            img: "/images/Acqualina Resort & Residences 828x300.jpg.jpeg",
+            img: "/images/hotels/Resorts.jpg.jpeg",
             title: "Resort"
         },
         {
-            img: "/images/Baccarat Hotel New York.jpg.jpeg",
+            img: "/images/hotels/Villas.jpg.jpeg",
             title:"Villas"
 
         },
         {
-            img: "/images/Amangiri hotel.jpg.jpeg",
+            img: "/images/hotels/Cottages.jpg.jpeg",
             title: "Cottage"
         },
         {
-            img: "/images/Nobu Hotel Chicago.jpg.jpeg",
+            img: "/images/hotels/Guest Houses.jpg.jpeg",
             title: "Guest House"
         },
         {
-            img: "/images/The Beverly Hills Hotel.jpg.jpeg",
+            img: "/images/hotels/Apartments.jpg.jpeg",
             title:"Appartments"
 
         },
         {
-            img: "/images/The Venetian Resort.jpg.jpeg",
+            img: "/images/hotels/Resort Villages.jpg.jpeg",
             title: "Resort Villages"
         },
        

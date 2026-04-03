@@ -45,8 +45,6 @@ export default function Flights() {
             />
 
             <div className='absolute bottom-2  px-4 '>
-
-             
                 <div className='bg-white rounded-2xl shadow-xl p-5 w-full '>
 
                    
