@@ -39,13 +39,13 @@ export default function Flights() {
         <section className='w-full relative h-[70vh] md:h-[85vh] overflow-hidden '>
 
             <img
-                src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp"
-                className='absolute inset-0 w-full h-[600px] object-cover'
+                src="/images/banner/flights banner.jpg.jpeg"
+                className='absolute inset-0 w-full h-full object-cover'
                 alt=""
             />
 
-            <div className='absolute bottom-2  px-4 '>
-                <div className='bg-white rounded-2xl shadow-xl p-5 w-full '>
+            <div className='absolute bottom-2 w-full  px-4 '>
+                <div className='bg-white rounded-2xl shadow-xl p-5 max-w-5xl mx-auto '>
 
                    
                     <div className='flex ite gap-6 mb-4'>
@@ -107,7 +107,7 @@ export default function Flights() {
                             >
                                 <div className='flex items-center gap-2'>
                                     <Users size={18} />
-                                    {total} Traveller
+                                    {total} T
                                 </div>
                                 <ChevronDown size={16} />
                             </div>

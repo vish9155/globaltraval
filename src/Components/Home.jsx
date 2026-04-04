@@ -10,13 +10,20 @@ import Faq from './Faq'
 export default function Home() {
     return (
         <>
-            <section data-aos="zoom-out" className="relative w-full h-[75vh] md:h-[99vh] overflow-hidden">
+            <section data-aos="zoom-out" className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
 
-                <img src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp" className='absolute inset-0 h-full w-full object-cover' alt="" />
+                {/* <img src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp" className='absolute inset-0 h-full w-full object-cover' alt="" /> */}
 
-
-                <div className="absolute inset-0 bg-black/40"></div>
+                <video
+                    src="/video/Home-Page-Video.mp4"
+                    playsInline
+                    loop
+                    muted
+                    autoPlay
+                    preload="auto"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                />
 
 
                 <div className="relative z-10  h-full px-4 text-center">
@@ -63,7 +70,7 @@ export default function Home() {
             </section>
             <section data-aos="flip-right"> <OurServices /></section>
             <section data-aos="fade-down-right"><PremiumSpecials /></section>
-            <section  data-aos="fade-up-left"><HotelStay /></section>
+            <section data-aos="fade-up-left"><HotelStay /></section>
             <section data-aos="fade-left"><Testimonials /></section>
             <section data-aos="fade-down">
                 <Faq />

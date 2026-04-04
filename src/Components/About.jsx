@@ -10,13 +10,11 @@ import MissionVision from './OurMission'
 export default function About() {
   return (
    <>
-    <section className="relative w-full h-[75vh] md:h-[99vh] overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
                
-            <img src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp" className='absolute inset-0 h-full w-full object-cover' alt="" />
-         
+            <img src="/images/banner/About us banner.jpg.jpeg" className='absolute inset-0 h-full w-full object-cover' alt="" />
 
-                <div className="absolute inset-0 bg-black/40"></div>
 
 
                 <div className="relative z-10  h-full px-4 text-center">

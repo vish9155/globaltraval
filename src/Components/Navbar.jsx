@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <section className="w-full  z-50 backdrop-blur-md bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white shadow-lg">
+    <section className="w-full  z-50 backdrop-blur-md bg-white text-black z-[999px] shadow-lg">
       
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-20">
         
@@ -33,8 +33,8 @@ export default function Navbar() {
               key={id}
               to={item.path}
               className={({ isActive }) =>
-                `relative font-medium transition hover:text-[#F8FAFC]  duration-300 ${
-                  isActive ? "text-white hover:text-[#D97706]" : "text-[#F59E0B]"
+                `relative font-medium transition hover:text-[#a06807]  duration-300 ${
+                  isActive ? "text-black hover:text-[#D97706]" : "text-[#F59E0B]"
                 } `
               }
             >

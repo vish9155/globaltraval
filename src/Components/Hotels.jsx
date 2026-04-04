@@ -27,10 +27,10 @@ export default function Hotels() {
     return (
         <>
             
-            <section className='w-full h-[85vh] md:h-[99vh] relative z-50'>
+            <section className='w-full h-[70vh] md:h-[85vh] relative z-50'>
                 <img
                     src="/images/LondonHouse Chicago 828x300.jpg.jpeg"
-                    className='absolute w-full h-[600px] object-cover brightness-[0.55]'
+                    className='absolute w-full h-full object-cover brightness-[0.55]'
                     alt=""
                 />
 
@@ -45,7 +45,7 @@ export default function Hotels() {
 
                             
                             <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
-                                <MapPin size={20} className='text-amber-500' />
+                                <MapPin size={20} className='' />
                                 <input
                                     type="text"
                                     placeholder='Where are you going?'
@@ -55,7 +55,7 @@ export default function Hotels() {
 
                           
                             <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
-                                <CalendarDays size={20} className='text-amber-500' />
+                                <CalendarDays size={20} className='' />
                                 <DatePicker
                                     selected={checkin}
                                     minDate={checkin}
@@ -66,7 +66,7 @@ export default function Hotels() {
 
                          
                             <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
-                                <CalendarDays size={20} className='text-amber-500' />
+                                <CalendarDays size={20} className='' />
                                 <DatePicker
                                     selected={checkout}
                                     minDate={checkout}
@@ -81,7 +81,7 @@ export default function Hotels() {
                                     className='flex items-center justify-between px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition cursor-pointer'
                                 >
                                     <div className='flex items-center gap-2'>
-                                        <Users size={18} className='text-amber-500' />
+                                        <Users size={18} className='' />
                                         <span className='text-sm'>
                                             {guest.adult}A <Dot size={14} className='inline' />
                                             {guest.children}C <Dot size={14} className='inline' />
@@ -138,7 +138,7 @@ export default function Hotels() {
                                 )}
                             </div>
 
-                            <button className='bg-gradient-to-r p-3 from-amber-500 to-orange-500 hover:opacity-90 text-white rounded-xl font-medium shadow-lg'>
+                            <button className='bg-gradient-to-r p-3 from-amber-500 via-amber-500 to-amber-500 hover:opacity-90 text-white rounded-xl font-medium shadow-lg'>
                                 Search
                             </button>
 

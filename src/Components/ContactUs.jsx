@@ -10,12 +10,10 @@ export default function ContactUs() {
             <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
                 <img 
-                    src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp"
-                    className="absolute inset-0 w-full h-full object-cover scale-110"
+                    src="/images/banner/contact us Banner.jpg.jpeg"
                     alt=""
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/50 to-black/90"></div>
 
                 <div className="relative z-10 flex items-center justify-center h-full text-center">
                     <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide animate-fadeIn">

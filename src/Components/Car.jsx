@@ -13,13 +13,11 @@ export default function Car() {
 
    
       <img 
-        src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp"
-        className='h-[500px] md:h-[600px] w-full object-cover brightness-75'
+        src="/images/banner/Car Rental Banner.jpg.jpeg"
+        className='h-full w-full object-cover brightness-75'
         alt=""
       />
 
-    
-      <div className='absolute inset-0 bg-black/20'></div>
 
     
       <div className='absolute bottom-10 w-full px-4 flex justify-center'>
