@@ -1,11 +1,14 @@
+
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
-import { CalendarDays, Dot, MapPin, Minus, Plus, User, Users } from 'lucide-react'
+import { CalendarDays, Dot, MapPin, Minus, Plus, Users } from 'lucide-react'
 import HotelStay from './HotelStay';
 import Property from './Property';
+import Testimonials from './Testimonials';
 
 export default function Hotels() {
+
     let [checkin, setCheckIn] = useState(new Date())
     let [checkout, setCheckout] = useState(new Date())
     let [open, setopen] = useState(false)
@@ -23,78 +26,134 @@ export default function Hotels() {
 
     return (
         <>
-            <section className='w-full h-screen relative ' >
-                <img src="/images/LondonHouse Chicago 828x300.jpg.jpeg" className='h-[600px] w-[1920px] object-cover brightness-75' alt="" />
-                <div className='absolute inset-0 bg-black/5'></div>
-                <div className='bg-white/80 absolute bottom-20 w-full py-10 flex flex-col md:flex-row items-center justify-center  gap-6 '>
-                    <div className='border rounded-lg flex items-center justify-center px-3'>
-                        <MapPin size={24} />
-                        <input type="text" name="city" id="city" placeholder='where are going ?' className='rounded-lg p-4 outline-none ' />
-                    </div>
-                    <div className='border rounded-lg flex items-center justify-center px-3'>
-                        <CalendarDays size={24} />
-                        <DatePicker selected={checkin} minDate={checkin} onChange={(date) => setCheckIn(date)} name="checkin" id="city" placeholder='where are going ?' className='rounded-lg p-4 outline-none ' />
-                    </div>
-                    <div className='border rounded-lg flex items-center justify-center px-3'>
-                        <CalendarDays size={24} />
-                        <DatePicker selected={checkout} minDate={checkout} onChange={(date) => setCheckout(date)} name="checkout" id="city" placeholder='where are going ?' className='rounded-lg p-4 outline-none ' />
-                    </div>
-                    <div className='relative border rounded-lg  cursor-pointer' >
-                        <div onClick={()=>setopen(!open)} className='flex items-center justify-center p-4 gap-5'>
-                            <Users size={20} />
-                        <div className='flex items-center justify-center'>
-                            <span>{guest.adult}-Adults</span>
-                          <Dot size={20} />
-                            <span>{guest.children}-Children</span>
-                           <Dot size={20} />
-                            <span>{guest.rooms}-Rooms</span>
-                        </div>
-                        </div>
-                        {
-                            open && (
-                                <div className='absolute top-15 left-0 w-full bg-white z-50 '>
-                            <div className='px-5 py-4 '>
-                                <div className='flex items-center justify-between'>
-                                    <h2>Adults</h2>
-                                <div className='flex items-center justify-between gap-5'>
-                                    <Minus size={20} onClick={()=>updateGuest('adult',-1)}/>
-                                    <span>{guest.adult}</span>
-                                    <Plus size={20}onClick={()=>updateGuest('adult',1)} />
-                                </div>
-                                </div>
-                                <div className='flex items-center justify-between py-4 z-[99px]'>
-                                    <h2>Children</h2>
-                                <div className='flex items-center justify-between gap-5'>
-                                    <Minus size={20} onClick={()=>updateGuest('children',-1)} />
-                                    <span>{guest.children}</span>
-                                    <Plus size={20} onClick={()=>updateGuest('children',1)}/>
-                                </div>
-                                </div>
-                               <div className='flex items-center justify-between'>
-                                 <h2>Rooms</h2>
-                                <div className='flex items-center justify-between gap-5'>
-                                    <Minus size={20} onClick={()=>updateGuest('rooms',-1)} />
-                                    <span>{guest.rooms}</span>
-                                    <Plus size={20} onClick={()=>updateGuest('rooms',1)}/>
-                                </div>
-                               </div>
-                            </div>
-                            <div className='items-center mx-auto p-5 flex justify-center cursor-pointer' onClick={()=>setopen(!open)}>
-                                <button className='p-2 rounded-lg px-8 text-center bg-amber-600' >Done</button>
+            
+            <section className='w-full h-[85vh] md:h-[99vh] relative z-50'>
+                <img
+                    src="/images/LondonHouse Chicago 828x300.jpg.jpeg"
+                    className='absolute w-full h-[600px] object-cover brightness-[0.55]'
+                    alt=""
+                />
+
+                
+                {/* <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent'></div> */}
+
+              
+                <div className='absolute bottom-20 w-full px-3'>
+                    <div className='max-w-7xl mx-auto backdrop-blur-xl bg-white shadow-2xl rounded-3xl p-5 md:p-7 border border-white/30'>
+
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4'>
+
+                            
+                            <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
+                                <MapPin size={20} className='text-amber-500' />
+                                <input
+                                    type="text"
+                                    placeholder='Where are you going?'
+                                    className='w-full outline-none bg-transparent text-sm'
+                                />
                             </div>
 
+                          
+                            <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
+                                <CalendarDays size={20} className='text-amber-500' />
+                                <DatePicker
+                                    selected={checkin}
+                                    minDate={checkin}
+                                    onChange={(date) => setCheckIn(date)}
+                                    className='w-full outline-none text-sm'
+                                />
+                            </div>
+
+                         
+                            <div className='flex items-center gap-3 px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition'>
+                                <CalendarDays size={20} className='text-amber-500' />
+                                <DatePicker
+                                    selected={checkout}
+                                    minDate={checkout}
+                                    onChange={(date) => setCheckout(date)}
+                                    className='w-full outline-none text-sm'
+                                />
+                            </div>
+
+                            <div className='relative z-50'>
+                                <div
+                                    onClick={() => setopen(!open)}
+                                    className='flex items-center justify-between px-4 py-3 rounded-xl bg-white shadow-sm hover:shadow-md transition cursor-pointer'
+                                >
+                                    <div className='flex items-center gap-2'>
+                                        <Users size={18} className='text-amber-500' />
+                                        <span className='text-sm'>
+                                            {guest.adult}A <Dot size={14} className='inline' />
+                                            {guest.children}C <Dot size={14} className='inline' />
+                                            {guest.rooms}R
+                                        </span>
+                                    </div>
+                                </div>
+
+                              
+                                {open && (
+                                    <div className='absolute bottom-14  left-0 w-full bg-white rounded-xl shadow-xl z-50 border'>
+
+                                        <div className='p-4 space-y-4'>
+
+                                            
+                                            <div className='flex justify-between items-center'>
+                                                <span>Adults</span>
+                                                <div className='flex items-center gap-4'>
+                                                    <Minus onClick={() => updateGuest('adult', -1)} className='cursor-pointer' />
+                                                    <span>{guest.adult}</span>
+                                                    <Plus onClick={() => updateGuest('adult', 1)} className='cursor-pointer' />
+                                                </div>
+                                            </div>
+
+                                       
+                                            <div className='flex justify-between items-center'>
+                                                <span>Children</span>
+                                                <div className='flex items-center gap-4'>
+                                                    <Minus onClick={() => updateGuest('children', -1)} className='cursor-pointer' />
+                                                    <span>{guest.children}</span>
+                                                    <Plus onClick={() => updateGuest('children', 1)} className='cursor-pointer' />
+                                                </div>
+                                            </div>
+
+                                            <div className='flex justify-between items-center'>
+                                                <span>Rooms</span>
+                                                <div className='flex items-center gap-4'>
+                                                    <Minus onClick={() => updateGuest('rooms', -1)} className='cursor-pointer' />
+                                                    <span>{guest.rooms}</span>
+                                                    <Plus onClick={() => updateGuest('rooms', 1)} className='cursor-pointer' />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='p-4 text-center'>
+                                            <button
+                                                onClick={() => setopen(false)}
+                                                className='bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg transition'
+                                            >
+                                                Done
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <button className='bg-gradient-to-r p-3 from-amber-500 to-orange-500 hover:opacity-90 text-white rounded-xl font-medium shadow-lg'>
+                                Search
+                            </button>
+
                         </div>
-                            )
-                        }
                     </div>
-
-                    <button className='p-4 px-8 bg-amber-500 rounded-lg'>Search</button>
-
                 </div>
-
             </section>
-            <HotelStay />
-           <section className='max-w-7xl mx-auto px-3 py-10'>
+
+       
+            <section className='py-20'>
+                <HotelStay />
+            </section>
+
+          
+      <section className='max-w-7xl mx-auto px-3 py-10'>
   <h2 className='text-xl font-semibold'>Trending Destination</h2>
    <p className='text-gray-600 pb-6'>Most popular choices for travelers from Usa</p>
   <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
@@ -177,7 +236,9 @@ export default function Hotels() {
   </div>
 
 </section>
-<Property />
+<Testimonials />
+            <Property />
         </>
     )
 }
+

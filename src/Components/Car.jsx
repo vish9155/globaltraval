@@ -9,7 +9,7 @@ export default function Car() {
   const [dropDate, setdropDate] = useState(new Date())
 
   return (
-    <section className='relative w-full min-h-screen'>
+    <section className='relative w-full h-[70vh] md:h-[85vh]'>
 
    
       <img 

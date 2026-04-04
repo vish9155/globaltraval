@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -8,46 +8,32 @@ import 'swiper/css/navigation'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
 import { Quote } from 'lucide-react';
+import { clientReviews } from '../data/testimonials';
 
 export default function Testimonials() {
- let testimonials = [
-  {
-    name: "Ram Sankar",
-    date: "November, 2025",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    message: "Our trip with Global Travel was absolutely amazing and perfectly organized from start to finish. The itinerary was well-planned, accommodations were comfortable, and every detail was taken care of. The team provided excellent support throughout the journey, making our experience smooth, stress-free, and truly unforgettable. Highly recommended for every traveler."
-  },
-  {
-    name: "Swadhinta Raj",
-    date: "February, 2026",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    message: "I had a wonderful experience booking my vacation through Global Travel. From flight bookings to hotel arrangements, everything was handled professionally. The customer support team was always available and helpful. This trip became one of my most memorable journeys, and I look forward to planning more adventures with them in the future."
-  },
-  {
-    name: "Shreya Ghoshrawat",
-    date: "January, 2026",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    message: "Global Travel made our family holiday incredibly special with their flawless planning and execution. Every destination was thoughtfully selected, and the entire journey felt comfortable and enjoyable. Their attention to detail and customer care truly stood out, making our trip stress-free and filled with beautiful memories we will cherish forever."
-  },
-  {
-    name: "Rohit Sharma",
-    date: "March, 2026",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
-    message: "Booking with Global Travel was the best decision we made for our vacation. The services were reliable, the prices were reasonable, and the overall experience exceeded our expectations. From start to end, everything was smooth, and we never faced any issues during the trip, which made it truly enjoyable."
-  },
-  {
-    name: "Anjali Verma",
-    date: "December, 2025",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
-    message: "Thanks to Global Travel, our trip was perfectly organized and full of wonderful experiences. The team ensured everything was seamless, from bookings to local support. We truly enjoyed every moment and would definitely choose them again for future travel plans because of their excellent service."
-  }
-];
+  let [tabs,setTabs]=useState([{title:"Flights",val:"flights"},{title:"Hotels",val:"hotels"},{title:"Cruise",val:"cruise"},{title:"Packages",val:"packages"},{title:"Cars",val:"cars"}])
+  let [selected,setSelected]=useState("flights") 
+ 
+  let filterdData=clientReviews[selected] || []
+
+  console.log(filterdData)
+
   return (
    <>
    <section className='bg-gradient-to-r from-blue-50 via-sky-100 to-blue-50 backdrop-blur-md py-5'>
+    <div className='text-center m-auto'>
+            {
+              tabs.map((item, id) => (
+                <button key={id} onClick={() => setSelected(item.val)} className={`cursor-pointer  text-center p-1 sm:p-2 md:p-3 text-white rounded gap-10 ms-5 mt-3 ${item.val === selected ?"bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-lg scale-105"
+                  : "bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white hover:bg-white/20"}`}>
+                  {item.title}
+                </button>
+              ))
+            }
+          </div>
     <div className='max-w-8xl mx-auto px-3 py-14'>
        <div>
-        <h2 className='text-3xl font-bold text-center text-yellow-800 '>Why Customers Love Global Traval</h2>
+        <h2 className='text-3xl font-bold text-center text-yellow-800 '>Why Customers Love Global Traval "{selected}"</h2>
         <div className='max-w-xl mx-auto grid grid-cols-4 gap-2 text-center py-6'>
            <div className='border-r-1'> 
               <h2 className='text-center text-2xl text-yellow-800'>140+</h2>
@@ -89,7 +75,7 @@ export default function Testimonials() {
         className="mySwiper"
       >
          {
-                                testimonials.map((item, id) => (
+                                filterdData.map((item, id) => (
                                     <SwiperSlide key={id}  className="relative overflow-hidden group shadow-2xl shadow-amber-300 bg-white rounded-xl py-5 ">
                                       
                                        <div className='overflow-y-scroll  h-50'>

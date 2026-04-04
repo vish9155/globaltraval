@@ -73,7 +73,7 @@ export default function Packages() {
                 <div className='py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 rounded-lg '>
                     {
                         honnymoonpackage.map((item, id) => (
-                            <div key={id} className='border bg-white/5 backdrop-blur-xl'>
+                            <div key={id} className='border bg-white/5 backdrop-blur-xl shadow-xl rounded hover:shadow-amber-300'>
                                 <div className='relative group overflow-hidden'>
                                     <img src={item.image} alt={item.image} className='h-full w-full object-cover group-hover:scale-110 cursor-pointer transition-all duration-300 ease-in' />
                                 </div>

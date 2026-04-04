@@ -17,10 +17,11 @@ export default function App() {
   let RefundPolicy = lazy(() => import('./Pages/policies/Refund_Policy'))
   let Disclaimers = lazy(() => import('./Pages/policies/Disclaimers'))
   let Contact = lazy(() => import('./Components/ContactUs'))
- let Flights = lazy(() => import('./Components/Flights'))
- let Hotels = lazy(() => import('./Components/Hotels'))
+  let Flights = lazy(() => import('./Components/Flights'))
+  let Hotels = lazy(() => import('./Components/Hotels'))
   let Cars = lazy(() => import('./Components/Car'))
-  let Package=lazy(() => import('./Components/Packages'))
+  let Cruises = lazy(() => import('./Components/Cruise'))
+  let Package = lazy(() => import('./Components/Packages'))
   let Services = lazy(() => import('./Components/OurServices'))
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -43,8 +44,9 @@ export default function App() {
             <Route path='/refund-policy' element={<RefundPolicy />} />
             <Route path='/disclaimer' element={<Disclaimers />} />
             <Route path='/flights' element={<Flights />} />
-           <Route path='/hotels' element={<Hotels />} />
-           <Route path='/cars' element={<Cars />} />
+            <Route path='/hotels' element={<Hotels />} />
+            <Route path='/cars' element={<Cars />} />
+            <Route path='/cruise' element={<Cruises />} />
             <Route path='/packages' element={<Package />} />
             <Route path='/services' element={<Services />} />
           </Routes>

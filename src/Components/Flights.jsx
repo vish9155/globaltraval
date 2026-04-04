@@ -36,7 +36,7 @@ export default function Flights() {
 
     return (
         <>
-        <section className='w-full relative h-[90vh] overflow-hidden '>
+        <section className='w-full relative h-[70vh] md:h-[85vh] overflow-hidden '>
 
             <img
                 src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp"

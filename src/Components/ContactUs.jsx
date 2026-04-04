@@ -7,7 +7,7 @@ export default function ContactUs() {
     return (
         <>
            
-            <section className="relative w-full h-[80vh] overflow-hidden">
+            <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
                 <img 
                     src="https://dmlib.airindia.com/adobe/assets/urn%3Aaaid%3Aaem%3Aee95dbb0-8f2a-496d-90b1-b6caafc9a86c/as/banner-hero-web.webp"
