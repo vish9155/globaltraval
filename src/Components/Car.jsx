@@ -14,7 +14,7 @@ export default function Car() {
    
       <img 
         src="/images/banner/Car Rental Banner.jpg.jpeg"
-        className='h-full w-full object-cover brightness-75'
+        className='h-full w-full  brightness-75'
         alt=""
       />
 

@@ -23,6 +23,9 @@ export default function App() {
   let Cruises = lazy(() => import('./Components/Cruise'))
   let Package = lazy(() => import('./Components/Packages'))
   let Services = lazy(() => import('./Components/OurServices'))
+  let BlogDetail=lazy(()=>import('./Pages/blog/BlogDetails'))
+  let BlogList=lazy(()=>import('./Pages/blog/BlogList'))
+   let FlightResult=lazy(()=>import('./Components/FlightResult'))
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     let timer = setTimeout(() => setLoading(false), 3000);
@@ -49,6 +52,9 @@ export default function App() {
             <Route path='/cruise' element={<Cruises />} />
             <Route path='/packages' element={<Package />} />
             <Route path='/services' element={<Services />} />
+             <Route path='/blog' element={<BlogList />} />
+            <Route path='/blog/:slug' element={<BlogDetail />} />
+            <Route path='/flight-results' element={<FlightResult />} />
           </Routes>
         </Suspense>
         {/* <Marquee /> */}

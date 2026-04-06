@@ -7,10 +7,10 @@ export default function Footer() {
     return (
         <footer className="w-full bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white">
 
-            {/* Top Section */}
+   
             <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                {/* Brand */}
+              
                 <div>
                     <NavLink
                         to="/"
@@ -26,21 +26,21 @@ export default function Footer() {
                     </p>
                 </div>
 
-                {/* Quick Links */}
+           
                 <div>
                     <h2 className="text-lg font-semibold border-b border-white/30 pb-2 mb-3">
                         Quick Links
                     </h2>
                     <div className="space-y-2 text-sm">
-                        {["Home", "Blogs", "Flights", "Cars", "Hotels", "Cruise", "Packages"].map((item, i) => (
-                            <NavLink key={i} className="block hover:text-black transition">
+                        {["Home", "Blog", "Flights", "Cars", "Hotels", "Cruise", "Packages"].map((item, i) => (
+                            <NavLink key={i} to={`/${item.toLowerCase()}`} className="block hover:text-black transition">
                                 {item}
                             </NavLink>
                         ))}
                     </div>
                 </div>
 
-                {/* Support */}
+              
                 <div>
                     <h2 className="text-lg font-semibold border-b border-white/30 pb-2 mb-3">
                         Supports
@@ -56,7 +56,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Contact */}
+              
                 <div>
                     <h2 className="text-lg font-semibold border-b border-white/30 pb-2 mb-4">
                         Contact Us
@@ -90,7 +90,7 @@ export default function Footer() {
 
             </div>
 
-            {/* Bottom Section */}
+       
             <div className="border-t border-white/20">
                 <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
 

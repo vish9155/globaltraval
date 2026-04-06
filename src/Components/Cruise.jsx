@@ -12,7 +12,7 @@ export default function Cruise() {
 
         <img
           src="/images/banner/Cruise Banner.jpg.jpeg"
-          className='w-full h-full  object-cover'
+          className='w-full h-full '
           alt=""
         />
 

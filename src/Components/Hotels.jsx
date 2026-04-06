@@ -29,8 +29,8 @@ export default function Hotels() {
             
             <section className='w-full h-[70vh] md:h-[85vh] relative z-50'>
                 <img
-                    src="/images/LondonHouse Chicago 828x300.jpg.jpeg"
-                    className='absolute w-full h-full object-cover brightness-[0.55]'
+                    src="/images/banner/hotels.jpg.jpeg"
+                    className='absolute w-full h-full  brightness-75'
                     alt=""
                 />
 

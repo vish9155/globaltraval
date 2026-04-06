@@ -13,7 +13,7 @@ export default function About() {
     <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
                
-            <img src="/images/banner/About us banner.jpg.jpeg" className='absolute inset-0 h-full w-full object-cover' alt="" />
+            <img src="/images/banner/About us banner.jpg.jpeg" className='absolute inset-0 h-full w-full ' alt="" />
 
 
 
@@ -50,9 +50,10 @@ export default function About() {
                <MissionVision />
              <WhyChosseus />
             <Faq />
+            <OurServices />
             <Testimonials />
         
-            <OurServices />
+            
    </>
   )
 }

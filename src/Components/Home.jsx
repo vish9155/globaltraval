@@ -21,8 +21,8 @@ export default function Home() {
                     loop
                     muted
                     autoPlay
-                    preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover z-0"
+                   
+                    className="absolute inset-0 w-full h-full object-cover "
                 />
 
 

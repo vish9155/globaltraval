@@ -10,8 +10,8 @@ export default function ContactUs() {
             <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
                 <img 
-                    src="/images/banner/contact us Banner.jpg.jpeg"
-                    alt=""
+                    src="/images/banner/contact.jpg.jpeg"
+                    alt="" className=' w-full h-full '
                 />
 
 

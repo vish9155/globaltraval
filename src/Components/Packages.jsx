@@ -14,7 +14,7 @@ export default function Packages() {
             <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
 
 
-                <img src="/images/banner/Home Page Banner.jpg.jpeg" className='absolute inset-0 h-full w-full object-cover' alt="" />
+                <img src="/images/banner/Home Page Banner.jpg.jpeg" className='absolute inset-0 h-full w-full' alt="" />
 
 
 
