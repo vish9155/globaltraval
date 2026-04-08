@@ -82,7 +82,13 @@ export default function Car() {
               />
             </div>
 
-            {/* Button */}
+              <div className='border rounded-lg px-3 py-2'>
+              <input 
+                type="number" 
+                className='w-full outline-none text-sm'
+                placeholder='Driver age'
+              />
+            </div>
             <div>
               <button className='w-full bg-yellow-400 hover:bg-yellow-500 transition rounded-lg py-3 font-semibold text-sm'>
                 Search

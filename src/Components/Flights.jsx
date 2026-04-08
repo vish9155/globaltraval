@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { MapPin, Calendar, Users, ChevronDown, Plus, Minus } from 'lucide-react';
 import TrainRoutes from './TrainRoutes';
+import { useDispatch } from 'react-redux';
+import { fetchFlights } from '../redux/FlightSlice';
 
 export default function Flights() {
+
+    let [fromSearch, setFromSearch] = useState([])
+    let [toSearch, setToSearch] = useState([])
 
     let [trip, setTrip] = useState("oneway")
     let [departDate, setDepartDate] = useState(new Date());
@@ -17,7 +22,7 @@ export default function Flights() {
     let [infant, setInfant] = useState(0)
     let [classe, setClass] = useState('Economy')
 
-    let navigate=useNavigate()
+    let navigate = useNavigate()
 
     let [form, setForm] = useState({
         from: "",
@@ -45,6 +50,32 @@ export default function Flights() {
 
     let total = adult + children + infant
 
+    useEffect(() => {
+        setForm((prev) => ({
+            ...prev,
+            adult,
+            children,
+            infant,
+            classe
+        }));
+    }, [adult, children, infant, classe]);
+
+    let searchLocation = async (value, type) => {
+        console.log(value)
+        let resp = await fetch(`http://localhost:5000/api/flight/location?keyword=${value}`)
+        let data = await resp.json()
+        console.log(data)
+        if (type == 'from') {
+            setFromSearch(data.data[0].data || [])
+        }
+        else {
+            if (type == 'to') {
+                setToSearch(data.data[0].data || [])
+            }
+        }
+        console.log(data)
+    }
+    let dispatch = useDispatch()
     let handleSubmit = async (e) => {
         e.preventDefault()
         let payload = {
@@ -53,23 +84,24 @@ export default function Flights() {
             returnDate: returnDate
                 ? returnDate.toISOString().split("T")[0]
                 : null,
+
             classe: classe.toUpperCase()
         };
 
-        let resp = await fetch("http://localhost:5000/api/flights/", {
-            method: "POST", headers: {
-                "Content-Type": "application/json",
-            },
-            credentials: "include",
-            body: JSON.stringify(payload)
-        })
-        let fligtdata = await resp.json()
-       navigate("/flight-results",{state:fligtdata.data})
+        let result = await dispatch(fetchFlights(payload))
+        if (result.payload) {
+            localStorage.setItem(
+                "flightsData",
+                JSON.stringify(result.payload)
+            );
+            navigate(`/flight-results`);
+        }
+        console.log(result)
     }
 
     return (
         <>
-            <section className='w-full relative h-[70vh] md:h-[85vh] overflow-hidden '>
+            <section className='w-full relative h-[70vh] md:h-[85vh]  '>
 
                 <img
                     src="/images/banner/flights.jpg.jpeg"
@@ -96,15 +128,54 @@ export default function Flights() {
                         <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-7 gap-3 items-center'>
 
 
-                            <div className='flex items-center gap-2 border p-3 rounded-xl'>
+                            <div className='relative z-50 flex items-center gap-2 border p-3 rounded-xl'>
                                 <MapPin size={18} />
-                                <input onChange={(e) => { setForm({ ...form, from: e.target.value }) }} type="text" placeholder='From' name='from' className='outline-none w-full' />
+                                <input onChange={(e) => {
+                                    setForm({ ...form, from: e.target.value })
+                                    searchLocation(e.target.value, "from")
+                                }} type="text" value={form.from} placeholder='From' name='from' className='outline-none w-full' />
+                                {fromSearch.length > 0 && (
+                                    <div className='absolute top-14 left-0 w-80 bg-white shadow-xl rounded-lg z-[999] h-auto overflow-y-auto'>
+                                        {fromSearch.slice(0, 20).map((item, i) => (
+                                            <div
+                                                key={i}
+                                                className='p-2 hover:bg-gray-100 cursor-pointer'
+                                                onClick={() => {
+                                                    setForm({ ...form, from: item.iataCode })
+                                                    setFromSearch([])
+                                                }}
+                                            >
+                                                {item.iataCode} - {item.name || item.detailedName}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
 
 
-                            <div className='flex items-center gap-2 border p-3 rounded-xl'>
+                            <div className='relative flex items-center gap-2 border p-3 rounded-xl'>
                                 <MapPin size={18} />
-                                <input onChange={(e) => { setForm({ ...form, to: e.target.value }) }} type="text" placeholder='To' name='to' className='outline-none w-full' />
+                                <input onChange={(e) => {
+                                    setForm({ ...form, to: e.target.value })
+                                    searchLocation(e.target.value, "to")
+                                }} type="text" placeholder='To' name='to' value={form.to} className='outline-none w-full' />
+                                {toSearch.length > 0 && (
+                                    <div className='absolute top-14 left-0 w-80 bg-white shadow-xl rounded-lg z-[999] h-80 overflow-y-auto'>
+                                        {toSearch.slice(0, 20).map((item, i) => (
+                                            <div
+                                                key={i}
+                                                className='p-2 hover:bg-gray-100 cursor-pointer'
+                                                onClick={() => {
+                                                    setForm({ ...form, to: item.iataCode })
+                                                    setToSearch([])
+                                                }}
+                                            >
+                                                {item.iataCode} - {item.name}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                             </div>
 
 
@@ -113,7 +184,7 @@ export default function Flights() {
                                 <DatePicker
                                     selected={departDate}
                                     onChange={(date) => setDepartDate(date)}
-
+                                    value={form.departDate}
                                     className="outline-none w-full"
                                     popperClassName="z-50"
                                     name='departDate'
@@ -131,6 +202,7 @@ export default function Flights() {
                                         minDate={departDate}
                                         popperClassName="z-50"
                                         name='returnDate'
+                                        value={form.returnDate}
                                     />
                                 </div>
                             )}
