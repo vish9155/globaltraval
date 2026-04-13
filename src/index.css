@@ -100,3 +100,62 @@ opacity: 0.5;
 
   font-size: 11px;
 }
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease;
+}
+
+ ::-webkit-scrollbar{
+  display: none;
+ }
+/* ❌ Google Translate Top Bar Hide */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* ❌ Body ko push hone se rokna */
+body {
+  top: 0px !important;
+}
+
+/* ❌ Extra iframe hide */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* ❌ Google translate logo / badge bhi hide */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* ❌ Translate dropdown default hide */
+.goog-te-gadget {
+  font-size: 0px !important;
+}
+
+/* 🔥 Google Translate bar force hide */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* body shift fix */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* iframe hide backup */
+iframe.skiptranslate {
+  display: none !important;
+}

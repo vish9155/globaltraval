@@ -1,213 +1,10 @@
+
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import FlightCard from "./FlightCard";
 
 import { useSearchParams } from "react-router-dom";
-
-// export default function FlightResult() {
-
-//   let reduxData = useSelector(s => s.flights.data);
-//   let [data, setData] = useState(null);
-
-//   let [params, setParams] = useSearchParams();
-
-//   useEffect(() => {
-//     let saved = localStorage.getItem("flightsData");
-//     if (saved) setData(JSON.parse(saved));
-//   }, []);
-
-//   let finalData = reduxData?.data?.length ? reduxData : data;
-//   let allFlights = finalData?.data || [];
-
-//   // 🔥 FILTER STATE
-//   let [filters, setFilters] = useState({
-//     airlines: [],
-//     stops: [],
-//     layovers: [],
-//     time: [],
-//     price: [0, 200000],
-//     sort: ""
-//   });
-
-//   // 🔥 URL SYNC
-//   useEffect(() => {
-//     setParams(filters);
-//   }, [filters]);
-
-//   // 🔥 DYNAMIC DATA
-//   let airlines = [...new Set(allFlights.map(f => f.validatingAirlineCodes[0]))];
-
-
-
-//   // 🔥 FILTER + SORT
-//   let filteredData = allFlights
-//     .filter(item => {
-//       let segments = item.itineraries[0].segments;
-//       let first = segments[0];
-//       let airline = item.validatingAirlineCodes[0];
-//       let stops = segments.length - 1;
-//       let price = Number(item.price.total);
-
-//       let depHour = new Date(first.departure.at).getHours();
-
-      // let timeMatch =
-      //   filters.time.length === 0 ||
-      //   filters.time.some(t =>
-      //     (t === "morning" && depHour >= 5 && depHour < 12) ||
-      //     (t === "afternoon" && depHour >= 12 && depHour < 17) ||
-      //     (t === "evening" && depHour >= 17 && depHour < 21) ||
-      //     (t === "night" && (depHour >= 21 || depHour < 5))
-      //   );
-
-//       let airlineMatch =
-//         filters.airlines.length === 0 ||
-//         filters.airlines.includes(airline);
-
-//       let stopMatch =
-//         filters.stops.length === 0 ||
-//         filters.stops.some(s =>
-//           (s === "non-stop" && stops === 0) ||
-//           (s === "1" && stops === 1) ||
-//           (s === "2+" && stops >= 2)
-//         );
-
-// let layoverCodes = segments.slice(1).map(s => s.departure.iataCode);
-
-// let layoverMatch =
-//   filters.layovers.length === 0 ||
-//   layoverCodes.some(code => filters.layovers.includes(code));
-
-//       let priceMatch =
-//         price >= filters.price[0] &&
-//         price <= filters.price[1];
-
-//       return airlineMatch && stopMatch && layoverMatch && timeMatch && priceMatch;
-//     })
-//     .sort((a, b) => {
-//       if (filters.sort === "cheap") {
-//         return a.price.total - b.price.total;
-//       }
-//       if (filters.sort === "fast") {
-//         return a.itineraries[0].duration.localeCompare(b.itineraries[0].duration);
-//       }
-//       return 0;
-//     });
-
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex">
-
-//       {/* 🔥 SIDEBAR */}
-//       <div className="w-72 bg-white p-4 shadow-lg space-y-6">
-
-//         <h2 className="font-bold text-lg">Filters</h2>
-
-//         {/* PRICE */}
-//         <div>
-//           <p className="font-semibold">Price</p>
-//           <input
-//             type="range"
-//             min="0"
-//             max="200000"
-//             onChange={(e) =>
-//               setFilters({ ...filters, price: [0, e.target.value] })
-//             }
-//           />
-//         </div>
-
-//         {/* AIRLINES */}
-//         <div>
-//           <p className="font-semibold">Airlines</p>
-//           {airlines.map(a => (
-//             <label key={a} className="block">
-//               <input
-//                 type="checkbox"
-//                 onChange={(e) => {
-//                   let updated = e.target.checked
-//                     ? [...filters.airlines, a]
-//                     : filters.airlines.filter(x => x !== a);
-
-//                   setFilters({ ...filters, airlines: updated });
-//                 }}
-//               /> {a}
-//             </label>
-//           ))}
-//         </div>
-
-//         {/* STOPS */}
-//         <div>
-//           <p className="font-semibold">Stops</p>
-//           {["non-stop", "1", "2+"].map(s => (
-//             <label key={s} className="block">
-//               <input
-//                 type="checkbox"
-//                 onChange={(e) => {
-//                   let updated = e.target.checked
-//                     ? [...filters.stops, s]
-//                     : filters.stops.filter(x => x !== s);
-
-//                   setFilters({ ...filters, stops: updated });
-//                 }}
-//               /> {s}
-//             </label>
-//           ))}
-//         </div>
-
-//         {/* TIME */}
-//         <div>
-//           <p className="font-semibold">Time</p>
-//           {["morning", "afternoon", "evening", "night"].map(t => (
-//             <label key={t} className="block">
-//               <input
-//                 type="checkbox"
-//                 onChange={(e) => {
-//                   let updated = e.target.checked
-//                     ? [...filters.time, t]
-//                     : filters.time.filter(x => x !== t);
-
-//                   setFilters({ ...filters, time: updated });
-//                 }}
-//               /> {t}
-//             </label>
-//           ))}
-//         </div>
-
-//       </div>
-
-    //   {/* 🔥 RIGHT SIDE */}
-    //   <div className="flex-1 p-4">
-
-    //     {/* SORT */}
-    //     <div className="flex justify-end mb-4">
-    //       <select
-    //         className="border p-2 rounded"
-    //         onChange={(e) =>
-    //           setFilters({ ...filters, sort: e.target.value })
-    //         }
-    //       >
-    //         <option value="">Sort</option>
-    //         <option value="cheap">Cheapest</option>
-    //         <option value="fast">Fastest</option>
-    //       </select>
-    //     </div>
-
-    //     {/* RESULTS */}
-    //     <div className="space-y-4">
-    //       {filteredData.map((item, i) => (
-    //         <div
-    //           key={i}
-
-    //         >
-    //           <FlightCard item={item} />
-    //         </div>
-    //       ))}
-    //     </div>
-
-    //   </div>
-
-    // </div>
-//   );
-// }
-
+import { FilterIcon, X } from "lucide-react";
 
 export default function FlightResult() {
 
@@ -224,24 +21,33 @@ export default function FlightResult() {
   let finalData = reduxData?.data?.length ? reduxData : data;
   let allFlights = finalData?.data || [];
 
+  let [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (finalData?.data?.length) {
+      setTimeout(() => setLoading(false), 800);
+    }
+  }, [finalData]);
+
   let [filters, setFilters] = useState({
     airlines: [],
     layovers: [],
     stops: [],
     time: [],
     sort: "",
-    price: []
+    maxPrice: 100000000,
+    minPrice: 0
   })
-
+let [openFilter, setOpenFilter] = useState(false);
   useEffect(() => {
     setParams(filters)
   }, [filters])
 
-  let airlines =[...new Set(allFlights.map(i => i.validatingAirlineCodes[0]))]
- let layovers = [
+  let airlines = [...new Set(allFlights.map(i => i.validatingAirlineCodes[0]))]
+  let layovers = [
     ...new Set(
       allFlights.flatMap(f =>
-        f.itineraries[0].segments.slice(1).map(s => s.departure.iataCode)
+        f.itineraries[0].segments.slice(1).map(s => s.departure.iataCode,s.departure.cityCode)
       )
     )
   ];
@@ -254,14 +60,21 @@ export default function FlightResult() {
       let stops = segments.length - 1;
       let depHour = new Date(first.departure.at).getHours()
 
-      let timeMatch = 
-      filters.time.length === 0 || 
-      filters.time.some(t =>
-        (t === "morning" && depHour >= 5 && depHour < 12) ||
-        (t === "afternoon" && depHour >= 12 && depHour < 17) ||
-        (t === "evening" && depHour >= 17 && depHour < 21) ||
-        (t === "night" && (depHour >= 21 || depHour < 5))
-      )
+      let timeMatch =
+        filters.time.length === 0 ||
+        filters.time.some(t =>
+          (t === "morning" && depHour >= 5 && depHour < 12) ||
+          (t === "afternoon" && depHour >= 12 && depHour < 17) ||
+          (t === "evening" && depHour >= 17 && depHour < 21) ||
+          (t === "night" && (depHour >= 21 || depHour < 5))
+        )
+
+      let price = Number(item.price.total);
+
+      let priceMatch =
+        price >= filters.minPrice &&
+        price <= filters.maxPrice;
+
       let airlinesMatch = filters.airlines.length === 0 || filters.airlines.includes(airlines)
       let stopMatch = filters.stops.length == 0 || filters.stops.some(s =>
         (s === "non-stop" && stops === 0) ||
@@ -274,103 +87,419 @@ export default function FlightResult() {
         filters.layovers.length === 0 ||
         layoverCodes.some(code => filters.layovers.includes(code));
 
-      return airlinesMatch && timeMatch && stopMatch && layoverMatch
+      return airlinesMatch && timeMatch && stopMatch && layoverMatch && priceMatch
     })
     .sort((a, b) => {
       if (filters.sort === "cheap") {
-        a.price - b.price
+        return a.price.total - b.price.total
       }
       else if (filters.sort === "fast") {
         return a.itineraries[0].duration.localeCompare(b.itineraries[0].duration);
       }
+      else if (filters.sort === "expensive") {
+        return b.price.total - a.price.total
+      }
       return 0;
     })
 
-console.log(filterData)
-  return (
-    <>
-   <div className="flex gap-5 ">
-     <div className="max-w-4xl p-4 py-10">
-      <div className="py-5 ">
-        {
-          airlines.map((item,i)=>(
-            <>
-             <label htmlFor={item} key={i} className="block gap-2 space-y-3 mt-3 ">
-              <input type="checkbox" className="px-3 ms-3 space-x-1" onChange={(e)=>{
-                let update=e.target.checked?[...filters.airlines,item]:filters.airlines.filter(x=>x!=item);
-                setFilters({...filters,airlines:update})
-              }} />
-              {item}
-             </label>
-            </>
-          ))
-        }
-      </div>
-      <div>
-        {
-          ["non-stop", "1", "2+"].map((item,i)=>(
-            <>
-             <label htmlFor={item} key={i} className="block gap-2 space-y-3 mt-3 ">
-              <input type="checkbox" className="px-3" onChange={(e)=>{
-                let update=e.target.checked?[...filters.stops,item]:filters.stops.filter(x=>x!=item);
-                setFilters({...filters,stops:update})
-              }} />
-              {item}
-             </label>
-            </>
-          ))
-        }
-      </div>
-      <div>
-        {
-          ["morning", "afternoon", "evening","night"].map((item,i)=>(
-            <>
-             <label htmlFor={item} key={i} className="block gap-2 space-y-3 mt-3 ">
-              <input type="checkbox" className="px-3" onChange={(e)=>{
-                let update=e.target.checked?[...filters.time,item]:filters.time.filter(x=>x!=item);
-                setFilters({...filters,time:update})
-              }} />
-              {item}
-             </label>
-            </>
-          ))
-        }
-      </div>
-      <div>
-        {
-          layovers.map((item,i)=>(
-            <>
-             <label htmlFor={item} key={i} className="block gap-2 space-y-3 mt-3 ">
-              <input type="checkbox" className="px-3" onChange={(e)=>{
-                let update=e.target.checked?[...filters.layovers,item]:filters.layovers.filter(x=>x!=item);
-                setFilters({...filters,layovers:update})
-              }} />
-              {item}
-             </label>
-            </>
-          ))
-        }
-      </div>
+  console.log(filterData)
+ return (
+  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 md:flex gap-6 px-3 md:px-6 py-4 md:py-6">
 
+    <div className="md:hidden sticky -top-2 z-50 bg-white shadow-md rounded-xl p-3 mb-4 flex items-center justify-between">
+
+      <button
+        onClick={() => setOpenFilter(true)}
+        className="flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 py-2 rounded-xl font-semibold shadow hover:scale-105 transition"
+      >
+        <FilterIcon size={24} /> Filters
+      </button>
+
+      <p className="text-sm font-medium text-gray-600">
+        {filterData.length} flights
+      </p>
+
+      <select
+        className="border rounded-lg px-2 py-1 text-xs outline-none focus:ring-2 focus:ring-yellow-400"
+        onChange={(e) =>
+          setFilters(prev => ({ ...prev, sort: e.target.value }))
+        }
+      >
+        <option value="">Sort</option>
+        <option value="cheap">Cheap</option>
+        <option value="expensive">Expensive</option>
+        <option value="fast">Fast</option>
+      </select>
     </div>
+
    
-      <div className="flex-1 p-4">
+    <div className="hidden md:block w-80 bg-white rounded-2xl shadow-lg p-5 max-h-screen sticky top-4 overflow-auto">
 
-        <div className="space-y-4">
-          {filterData.map((item, i) => (
-            <div
-              key={i}
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-bold">Filters</h2>
+        <button
+          onClick={() =>
+            setFilters({
+              airlines: [],
+              layovers: [],
+              stops: [],
+              time: [],
+              sort: "",
+              maxPrice: [],
+              minPrice: []
+            })
+          }
+          className="text-sm text-blue-500 hover:underline"
+        >
+          Clear
+        </button>
+      </div>
 
+     <div className="mb-6">
+          <h3 className="font-semibold mb-3">Airlines</h3>
+          <div className="space-y-2 max-h-40 overflow-y-auto">
+            {airlines.map((item, i) => (
+              <label key={i} className="flex items-center gap-2 cursor-pointer text-sm">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.airlines, item]
+                      : filters.airlines.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, airlines: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Price Range</h3>
+
+          <div className="flex justify-between text-sm text-gray-500 mb-2">
+            <span>$ {filters.minPrice}</span>
+            <span>${filters.maxPrice}</span>
+          </div>
+
+          <div className="relative">
+            
+            <input
+              type="range"
+              min="0"
+              max="200000"
+              value={filters.minPrice}
+              onChange={(e) =>
+                setFilters(prev => ({
+                  ...prev,
+                  minPrice: Number(e.target.value)
+                }))
+              }
+              className="w-full appearance-none z-[50] h-2 bg-yellow-400 rounded-lg"
+            />
+
+            
+            <input
+              type="range"
+              min="0"
+              max="200000"
+              value={filters.maxPrice}
+              onChange={(e) =>
+                setFilters(prev => ({
+                  ...prev,
+                  maxPrice: Number(e.target.value)
+                }))
+              }
+              className=" w-full appearance-none z-[50] h-2 bg-yellow-400 rounded-lg"
+            />
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Stops</h3>
+          <div className="space-y-2">
+            {["non-stop", "1", "2+"].map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.stops, item]
+                      : filters.stops.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, stops: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Departure Time</h3>
+          <div className="space-y-2">
+            {["morning", "afternoon", "evening", "night"].map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.time, item]
+                      : filters.time.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, time: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Layover Airports</h3>
+          <div className="space-y-2 max-h-40 overflow-y-auto">
+            {layovers.map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.layovers, item]
+                      : filters.layovers.filter(x => x !== item);
+
+                     setFilters(prev => ({ ...prev, layovers: update }));
+                   }}
+                 />
+                 {item}
+               </label>
+             ))}
+           </div>
+         </div>
+
+      
+    </div>
+
+    
+    {openFilter && (
+      <div className="fixed inset-0 z-[9999] flex">
+
+        <div
+          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+          onClick={() => setOpenFilter(false)}
+        />
+
+        <div className="relative w-[85%] max-w-sm bg-white h-full p-5 overflow-auto animate-slideIn shadow-2xl">
+
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold">Filters</h2>
+            <button
+              onClick={() => setOpenFilter(false)}
+              className="text-lg"
             >
-              <FlightCard item={item} />
+              <X size={28} />
+            </button>
+          </div>
+
+        
+     <div className="mb-6">
+          <h3 className="font-semibold mb-3">Airlines</h3>
+          <div className="space-y-2 max-h-40 overflow-y-auto">
+            {airlines.map((item, i) => (
+              <label key={i} className="flex items-center gap-2 cursor-pointer text-sm">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.airlines, item]
+                      : filters.airlines.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, airlines: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Price Range</h3>
+
+          <div className="flex justify-between text-sm text-gray-500 mb-2">
+            <span>$ {filters.minPrice}</span>
+            <span>${filters.maxPrice}</span>
+          </div>
+
+          <div className="relative">
+            
+            <input
+              type="range"
+              min="0"
+              max="200000"
+              value={filters.minPrice}
+              onChange={(e) =>
+                setFilters(prev => ({
+                  ...prev,
+                  minPrice: Number(e.target.value)
+                }))
+              }
+              className="w-full appearance-none z-[50] h-2 bg-yellow-400 rounded-lg"
+            />
+
+            
+            <input
+              type="range"
+              min="0"
+              max="200000"
+              value={filters.maxPrice}
+              onChange={(e) =>
+                setFilters(prev => ({
+                  ...prev,
+                  maxPrice: Number(e.target.value)
+                }))
+              }
+              className=" w-full appearance-none z-[50] h-2 bg-yellow-400 rounded-lg"
+            />
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Stops</h3>
+          <div className="space-y-2">
+            {["non-stop", "1", "2+"].map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.stops, item]
+                      : filters.stops.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, stops: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Departure Time</h3>
+          <div className="space-y-2">
+            {["morning", "afternoon", "evening", "night"].map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.time, item]
+                      : filters.time.filter(x => x !== item);
+
+                    setFilters(prev => ({ ...prev, time: update }));
+                  }}
+                />
+                {item}
+              </label>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Layover Airports</h3>
+          <div className="space-y-2 max-h-40 overflow-y-auto">
+            {layovers.map((item, i) => (
+              <label key={i} className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="accent-yellow-400"
+                  onChange={(e) => {
+                    let update = e.target.checked
+                      ? [...filters.layovers, item]
+                      : filters.layovers.filter(x => x !== item);
+
+                     setFilters(prev => ({ ...prev, layovers: update }));
+                   }}
+                 />
+                 {item}
+               </label>
+             ))}
+           </div>
+         </div>
+
+          <button
+            onClick={() => setOpenFilter(false)}
+            className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 py-3 rounded-xl font-semibold mt-4 shadow"
+          >
+            Apply Filters
+          </button>
+
+        </div>
+      </div>
+    )}
+
+   
+    <div className="flex-1">
+
+      <div className="hidden md:flex justify-between items-center bg-white p-4 rounded-xl shadow mb-5 sticky -top-1 z-40">
+
+        <p className="text-gray-600">
+          <span className="font-semibold text-black">
+            {filterData.length}
+          </span> Flights Found
+        </p>
+
+        <select
+          className="border rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-yellow-400"
+          onChange={(e) =>
+            setFilters(prev => ({ ...prev, sort: e.target.value }))
+          }
+        >
+          <option value="">Sort</option>
+          <option value="cheap"> Cheapest</option>
+          <option value="expensive"> Expensive</option>
+          <option value="fast"> Fastest</option>
+        </select>
+
+      </div>
+
+    
+      {loading ? (
+        <div className="space-y-5">
+          {[1, 2, 3, 4].map(i => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow animate-pulse">
+              <div className="h-4 bg-gray-300 rounded w-1/3 mb-4"></div>
+              <div className="h-4 bg-gray-200 rounded w-2/3 mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2"></div>
             </div>
           ))}
         </div>
+      ) : (
+        <div className="space-y-4">
+          {filterData.map((item, i) => (
+            <div className="hover:scale-[1.01] transition">
+              <FlightCard key={i} item={item} />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
 
-      </div>
-
-   </div>
-   
-    </>
-  )
+  </div>
+);
 }

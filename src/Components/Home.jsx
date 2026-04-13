@@ -34,7 +34,7 @@ export default function Home() {
                     </div>
                     <div className='max-w-70 mx-auto flex justify-between items center'>
                         <div>
-                            <NavLink to={'/search-flights'} className={`p-4 mx-auto bg-yellow-600  hover:bg-yellow-800 rounded-xl text-white`}>Search Flights</NavLink>
+                            <NavLink to={'/flights'} className={`p-4 mx-auto bg-yellow-600  hover:bg-yellow-800 rounded-xl text-white`}>Search Flights</NavLink>
                         </div>
                         <div>
                             <NavLink to={'tel:8663075957'} className={`p-4 mx-auto bg-gray-600 hover:bg-black rounded-xl text-white`}>Call Us Now</NavLink>
@@ -69,8 +69,9 @@ export default function Home() {
                 </div>
             </section>
             <section data-aos="flip-right"> <OurServices /></section>
-            <section data-aos="fade-down-right"><PremiumSpecials /></section>
             <section data-aos="fade-up-left"><HotelStay /></section>
+            <section data-aos="fade-down-right"><PremiumSpecials /></section>
+            
             <section data-aos="fade-left"><Testimonials /></section>
             <section data-aos="fade-down">
                 <Faq />

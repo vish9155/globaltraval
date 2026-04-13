@@ -8,6 +8,7 @@ export let fetchFlights = createAsyncThunk("flights/search", async (payload, { r
             credentials: "include",
             body: JSON.stringify(payload)
         })
+        console.log(resp)
         let fligtdata = await resp.json()
         console.log(fligtdata)
         return fligtdata.data

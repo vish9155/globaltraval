@@ -12,7 +12,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // import required modules
 
 import { NavLink } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, HotelIcon } from 'lucide-react';
 export default function HotelStay() {
     let trendingDestination = [
         {
@@ -56,9 +56,16 @@ export default function HotelStay() {
     ];
     return (
         <>
-            <section className=' bg-yellow-300/30 backdrop-blur-md'>
+            <section className=' bg-gray-800/5 backdrop-blur-md shadow-xl shadow-white rounded-2xl max-w-7xl mx-auto px-3 '>
                 <div className='max-w-6xl mx-auto px-3 py-10 '>
-                    <h2 className='p-3 text-lg sm:text-xl md:text-2xl'>Explore Hotels Stay</h2>
+                   <div className='max-w-7xl mx-auto px-4 mb-10'>
+        <h2 className='text-3xl md:text-4xl font-bold text-black flex gap-2'>
+          <HotelIcon size={33} className='mt-1'/> Luxury Hotel Stays
+        </h2>
+        <p className='text-gray-900 text-sm mt-2'>
+          Handpicked premium hotels for unforgettable experiences
+        </p>
+      </div>
                     <div className='p-3'>
 
                         <Swiper

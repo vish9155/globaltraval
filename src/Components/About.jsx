@@ -48,10 +48,11 @@ export default function About() {
             
             <ExperienceWithExpert />
                <MissionVision />
-             <WhyChosseus />
-            <Faq />
+          
             <OurServices />
             <Testimonials />
+               <WhyChosseus />
+            <Faq />
         
             
    </>

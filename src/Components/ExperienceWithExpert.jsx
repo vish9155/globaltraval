@@ -35,20 +35,20 @@ export default function ExperienceWithExpert() {
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-8  '>
 
                             <div>
-                                <div className='z-40  shadow-lg shadow-yellow-600 group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer'>
+                                <div className='z-40  shadow-lg shadow-white group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer'>
                                     <img src="/images/about/account.png" className='h-full w-full object-cover rounded-xl group-hover:scale-110 ' alt="" />
                                     <h2 className='text-lg md:text-xl  p-3 text-center'>Emily Johnson</h2>
                                 </div>
                             </div>
                             <div>
-                                <div className='z-40 shadow-lg shadow-yellow-600 group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer'>
+                                <div className='z-40 shadow-lg shadow-white group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer'>
                                     <img src="/images/about/manager.png" className='h-full w-full object-cover rounded-xl group-hover:scale-110 ' alt="" />
                                     <h2 className='text-lg md:text-xl  p-3 text-center'>Sarah Williams</h2>
 
                                 </div>
                             </div>
                             <div>
-                                <div className='z-40 shadow-lg shadow-yellow-600 group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer' >
+                                <div className='z-40 shadow-lg shadow-white group overflow-hidden relative p-5 mx-auto rounded-xl transform translate-x-0 hover:-translate-x-4 transition-transform duration-300 ease-in cursor-pointer' >
                                     <img src="/images/about/supervisor.png" className='h-full w-full object-cover rounded-xl group-hover:scale-110 ' alt="" />
                                     <h2 className='text-lg md:text-xl  p-3 text-center'>Olivia Brown</h2>
 

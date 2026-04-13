@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MissionVision() {
   return (
-    <section className="bg-gradient-to-br from-yellow-700 via-yellow-900 to-yellow-800 text-white py-16 px-4">
+    <section className="max-w-6xl mx-auto  rounded-lg shadow-2xl shadow-white py-16 px-4">
       
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 tracking-wide">
@@ -16,7 +16,7 @@ export default function MissionVision() {
             <h3 className="text-2xl font-semibold mb-4 text-yellow-400">
                Our Vision
             </h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               To become a globally trusted travel brand that transforms the way people 
               explore the world by delivering seamless, luxurious, and unforgettable 
               travel experiences. We envision a future where travel is not just a journey, 
@@ -29,7 +29,7 @@ export default function MissionVision() {
             <h3 className="text-2xl font-semibold mb-4 text-yellow-400">
                Our Mission
             </h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               Our mission is to simplify travel while elevating every experience through 
               innovation, personalization, and exceptional service. We aim to provide our 
               customers with the best travel solutions—combining premium quality, 

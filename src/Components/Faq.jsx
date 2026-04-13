@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { faqdata } from '../data/faq'
-import { Plus } from 'lucide-react';
+import React, { useState } from 'react';
+import { faqdata } from '../data/faq';
 import { FaPlus } from 'react-icons/fa';
-export default function Faq() {
 
+export default function Faq() {
   let tabs = [
     { label: "Booking", key: "booking_services" },
     { label: "Payment", key: "payment_pricing" },
@@ -17,80 +16,127 @@ export default function Faq() {
     { label: "Support", key: "support_security" }
   ];
 
-  let [tab, setTab] = useState("booking_services")
-  let [open, setOpen] = useState(false)
-  let [search,setSearch] = useState("")
-  let Selectedfaqdata = faqdata[tab] || []
-  let filterdata=Selectedfaqdata.filter((item)=>item.question.toLowerCase().includes(search.toLowerCase()))
-  console.log(tab, Selectedfaqdata)
+  let [tab, setTab] = useState("booking_services");
+  let [open, setOpen] = useState(false);
+  let [search, setSearch] = useState("");
+  
+  let Selectedfaqdata = faqdata[tab] || [];
+  let filterdata = Selectedfaqdata.filter((item) => 
+    item.question.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <>
-      <section className='w-full px-4 p mx-auto bg-gradient-to-r from-purple-50 via-indigo-100 to-purple-50'>
-        <header className="text-center py-12 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
-          Help Center
-        </h1>
-        <p className="text-gray-600 text-sm md:text-base">
-          Find answers to your questions instantly
-        </p>
-         <div className='max-w-3xl mx-auto'>
-          <input type="text" placeholder='ask your questions' onChange={(e)=>setSearch(e.target.value)} className='w-full outline-amber-300 border border-amber-300 items-center mx-auto p-4 rounded-full mt-5 ' />
-        </div>
-        </header>
-         {filterdata.length === 0 && (
-            <p className="text-center text-gray-700">
-              No results found
-            </p>
-          )}
-        <div className='max-w-7xl mx-auto  px-4'>
-          <h1 className='text-center text-xl sm:text-2xl md:text-3xl p-3 sm:p-4 md:p-5 '>Frequntly Asked Questions</h1>
-          <div className='text-center m-auto'>
-            {
-              tabs.map((item, id) => (
-                <button key={id} onClick={() => setTab(item.key)} className={`cursor-pointer  text-center p-1 sm:p-2 md:p-3 text-white rounded gap-10 ms-5 mt-3 ${item.key === tab ?"bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-lg scale-105"
-                  : "bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#020617] text-white hover:bg-white/20"}`}>
-                  {item.label}
-                </button>
-              ))
-            }
+    <div className="min-h-screen bg-[#fafaf9] text-slate-900 font-sans selection:bg-amber-100">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-white border-b border-slate-100">
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
+        
+        <header className="relative max-w-5xl mx-auto text-center py-20 px-6">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest uppercase bg-amber-50 text-amber-700 rounded-full border border-amber-100">
+            Customer Support
+          </span>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900">
+            How can we <span className="text-amber-600">help you?</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-slate-500 text-lg leading-relaxed">
+            Search our knowledge base or browse categories below to find professional solutions for your journey.
+          </p>
+
+          <div className="max-w-2xl mx-auto mt-10 relative">
+            <input 
+              type="text" 
+              placeholder="Search for questions (e.g. 'refund policy')..." 
+              onChange={(e) => setSearch(e.target.value)} 
+              className="w-full bg-white shadow-2xl shadow-slate-200/50 outline-none border border-slate-200 focus:border-amber-400 p-5 pl-8 rounded-2xl transition-all duration-300 text-slate-700 placeholder:text-slate-400" 
+            />
           </div>
+        </header>
+      </section>
+
+      {/* Tabs Section */}
+      <section className="max-w-7xl mx-auto px-6 -mt-8 relative z-10">
+        <div className="flex flex-wrap justify-center gap-3 bg-white/80 backdrop-blur-md p-4 rounded-3xl shadow-xl border border-slate-100">
+          {tabs.map((item, id) => (
+            <button 
+              key={id} 
+              onClick={() => { setTab(item.key); setOpen(null); }} 
+              className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 transform active:scale-95 ${
+                item.key === tab 
+                ? "bg-slate-900 text-white shadow-lg shadow-slate-300 scale-105" 
+                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
-        <section className='max-w-3xl px-4 py-3  mx-auto'>
+      </section>
 
-        <div className="max-w-7xl mx-auto py-12 px-4">
-          <div className='grid grid-cols-1 gap-5 m-auto text-center'>
-            {
-              filterdata?.map((item, id) => {
-                let openIndex = open === id
-                return (
-                  <div key={id} className='bg-white/5 border border-white/10  backdrop-blur-md rounded-2xl overflow-hidden '>
-                    <button className={`flex items-center justify-between p-4 md:p-5 text-left w-full ${openIndex ? "bg-yellow-600 text-white" : ""}`} onClick={() => setOpen(openIndex ? null : id)}>
+      {/* FAQ Content */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="mb-12 flex items-center justify-between border-b border-slate-200 pb-6">
+            <h2 className="text-2xl font-bold text-slate-800">
+                {tabs.find(t => t.key === tab)?.label} FAQs
+            </h2>
+            <span className="text-sm text-slate-400 font-medium">
+                {filterdata.length} Results
+            </span>
+        </div>
 
-                      <h3 className=''>{item.question}</h3>
-                      <span className={`inline-block text-xl transition-transform duration-300 ${openIndex ? "rotate-45" : "rotate-0"}`}><FaPlus className='text-sm' /></span>
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out ${openIndex
-                          ? "max-h-40 opacity-100"
-                          : "max-h-0 opacity-0"
-                        } overflow-hidden`}
-                    >
-                      <div className="px-5 pb-5 text-gray-600 bg-yellow-200 text-sm">
+        {filterdata.length === 0 ? (
+          <div className="text-center py-20 bg-slate-50 rounded-3xl border border-dashed border-slate-300">
+            <p className="text-slate-500 font-medium">No matches found for "{search}"</p>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {filterdata.map((item, id) => {
+              const isOpen = open === id;
+              return (
+                <div 
+                  key={id} 
+                  className={`group transition-all duration-500 rounded-2xl border ${
+                    isOpen ? "border-amber-200 bg-amber-50/30" : "border-slate-200 bg-white hover:border-amber-200"
+                  }`}
+                >
+                  <button 
+                    className="flex items-center justify-between p-6 w-full text-left focus:outline-none" 
+                    onClick={() => setOpen(isOpen ? null : id)}
+                  >
+                    <h3 className={`font-semibold text-lg transition-colors ${isOpen ? "text-amber-900" : "text-slate-700"}`}>
+                      {item.question}
+                    </h3>
+                    <div className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                      isOpen ? "bg-amber-500 text-white rotate-45" : "bg-slate-100 text-slate-400 group-hover:bg-amber-100 group-hover:text-amber-600"
+                    }`}>
+                      <FaPlus className="text-xs" />
+                    </div>
+                  </button>
+                  
+                  <div 
+                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                      isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="px-6 pb-8 text-slate-600 leading-relaxed text-base">
+                      <div className="pt-2 border-t border-amber-100/50">
                         {item.answer}
                       </div>
                     </div>
-
                   </div>
-                )
-              })
-            }
+                </div>
+              );
+            })}
           </div>
-        </div>
+        )}
+      </section>
 
-      </section>
-      </section>
-      
-    </>
-  )
+      {/* Footer Decoration */}
+      <div className="max-w-lg mx-auto text-center pb-20">
+          <p className="text-slate-400 text-sm mb-4">Still need help?</p>
+          <button className="px-8 py-3 bg-slate-900 text-white rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg">
+              Contact Concierge Support
+          </button>
+      </div>
+    </div>
+  );
 }
-

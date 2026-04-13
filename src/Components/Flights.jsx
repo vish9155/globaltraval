@@ -14,7 +14,7 @@ export default function Flights() {
 
     let [trip, setTrip] = useState("oneway")
     let [departDate, setDepartDate] = useState(new Date());
-    let [returnDate, setReturnDate] = useState(null);
+    let [returnDate, setReturnDate] = useState(new Date());
     let [open, setOpen] = useState(false)
 
     let [adult, setAdult] = useState(1)
