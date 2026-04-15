@@ -45,7 +45,7 @@ export default function TrendingDestination() {
         <>
             <section className='max-w-6xl mx-auto px-3 py-10'>
                 <div className='flex justify-between items-center'>
-                    <h2 className='p-3 text-lg sm:text-xl md:text-3xl font-semibold flex gap-1'>Trending Destination <TrendingUp className='text-fuchsia-600' size={24} /></h2>
+                    <h2 className='p-3 text-lg sm:text-xl md:text-3xl font-semibold flex gap-1 text-fuchsia-700'>Top Travel Destinations Worldwide <TrendingUp className='text-fuchsia-600' size={24} /></h2>
                     <NavLink className={'text-fuchsia-600 hover:underline-fuchsia-700 flex gap-1 '} to={'/flights'}>View All <ArrowRight size={18} /> </NavLink>
                 </div>
                 <div className='p-3'>

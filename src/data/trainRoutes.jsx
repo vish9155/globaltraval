@@ -1,4 +1,4 @@
-export let trainroutes=[
+export let trainroutes = [
   { "id": 1, "category": "domestic", "from": { "code": "JFK", "city": "New York" }, "to": { "code": "LAX", "city": "Los Angeles" }, "departureDate": "2026-05-10", "returnDate": "2026-05-15", "tripType": "RoundTrip", "price": 220.50, "currency": "USD" },
   { "id": 2, "category": "domestic", "from": { "code": "ATL", "city": "Atlanta" }, "to": { "code": "MCO", "city": "Orlando" }, "departureDate": "2026-05-12", "returnDate": "2026-05-16", "tripType": "RoundTrip", "price": 130.75, "currency": "USD" },
   { "id": 3, "category": "domestic", "from": { "code": "LAX", "city": "Los Angeles" }, "to": { "code": "SFO", "city": "San Francisco" }, "departureDate": "2026-05-14", "returnDate": "2026-05-18", "tripType": "RoundTrip", "price": 95.20, "currency": "USD" },

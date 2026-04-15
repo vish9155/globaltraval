@@ -277,7 +277,60 @@ export default function Flights() {
                 </div>
 
             </section>
+               <section className='grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 max-w-7xl mx-auto px-3 py-10'>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Book Flights Online at Best Prices Worldwide</h2>
+                    <p className='py-3 text-base pl-3'>Booking flights should be simple, fast, and reliable. At Global Travel Holdings LLC, our flight booking online platform is designed to help you find the right flights at the best available prices without any hassle. Whether you're planning a business trip or a vacation, we make it easy to compare options and book with confidence</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Find Cheap Flight Tickets for Every Destination</h2>
+                    <p className='py-3 text-base pl-3'>Explore a wide range of options for both domestic and international travel. Our platform allows you to compare airlines, prices, and schedules so you can choose what fits your plan perfectly. With access to cheap flight tickets and exclusive offers, traveling has never been more affordable.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Domestic & International Flight Booking Made Easy</h2>
+                    <p className='pl-3 py-3 text-base'>From short domestic routes to long-haul international journeys, we provide a seamless domestic flight booking and book international flights experience. Choose from multiple airlines, flexible timings, and convenient routes—all in one place.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Get the Best Flight Deals & Offers</h2>
+                    <p className='pl-3 py-3 text-base'>We help travelers find the best flight deals by offering competitive pricing and smart search options. Whether you’re booking in advance or looking for last-minute tickets, our platform ensures value for every trip.</p>
+                </div>
+
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Simple & Secure Airline Ticket Booking</h2>
+                    <p className='py-3 pl-3 text-base'>Our system is built for fast and secure airline ticket booking. With an easy-to-use interface and safe payment options, you can complete your booking in just a few steps.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Start Your Journey Today</h2>
+                    <p className='py-3 pl-3 text-base'>Search, compare, and book your flights with ease through Global Travel Holdings LLC. Whether you're traveling locally or internationally, our platform ensures a smooth and reliable booking experience from start to finish.</p>
+                </div>
+
+
+            </section>
             <TrainRoutes />
+         
+            <section className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-3 py-10'>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Why Book Flights with Global Travel Holdings LLC</h2>
+                    <ul className='pl-10 list-disc leading-relaxed p-6'>
+                        <li>Easy-to-use flight search and booking system</li>
+                        <li>Competitive pricing on global routes</li>
+                        <li>Secure payment and instant confirmation</li>
+                        <li>Access to multiple airlines and routes</li>
+                        <li>Dedicated customer support for assistance</li>
+                    </ul>
+
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Tips to Find Cheap Flights</h2>
+                    <ul className='pl-10 list-disc leading-relaxed py-4'>
+                        <li>Book your tickets in advance for better prices</li>
+                        <li>Be flexible with travel dates and times</li>
+                        <li>Look for weekday departures for lower fares</li>
+                        <li>Compare multiple airlines before booking</li>
+                        <li>Check seasonal offers and discounts</li>
+                    </ul>
+                </div>
+            </section>
         </>
 
     )

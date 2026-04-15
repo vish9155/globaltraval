@@ -5,17 +5,22 @@ export default function ExperienceWithExpert() {
    <>
      <section>
                 <div className='max-w-7xl mx-auto py-10 px-3'>
-                    <h2 className='text-xl sm:text-2xl md:text-3xl text-center text-yellow-600'>Experienced Premium Travel Advisors</h2>
-                    <div className=' max-w-2xl mx-auto px-3 py-5'>
+                    <h2 className='text-xl sm:text-2xl md:text-3xl text-center text-fuchsia-700'>What We Offer</h2>
+                    
+                    <div className=' max-w-4xl mx-auto px-3 py-5'>
                         <p className='text-center  text-sm sm:text-base text-gray-600 p-1 sm:p-2 md:p-3'>
-                           We are experts at booking premium class airline tickets for you and know what to look for regarding price patterns, fare restrictions, and how best to optimize an airline route. By leveraging our relationships with airlines and our knowledge of the marketplace, we help travelers get the advantages of luxury fares without sacrificing comfort or flexibility.
+                          We provide a complete flight hotel car booking platform designed to meet the needs of modern travelers:
                         </p>
-                        <p className='text-center  text-sm sm:text-base text-gray-600 p-1 sm:p-2 md:p-3'>
-                            We do more than just book and send tickets – we work closely with you to make smart travel choices, including understanding pricing; knowing policies; and providing continual support up until the date of your travel.
-                        </p>
-                        <p className='text-center  text-sm sm:text-base text-gray-600 p-1 sm:p-2 md:p-3'>
-                            Traveling in a premium cabin should be effortless…we create this experience.
-                        </p>
+                        <ul className='pl-50 list-disc text-center'>
+                            <li className='text-justify'>Easy flight bookings for domestic and international travel</li>
+                            <li className='text-justify'>Comfortable hotel reservations across global destinations</li>
+                            <li className='text-justify'>Convenient car rental services for local and long-distance travel</li>
+                            <li className='text-justify'>Cruise bookings for luxury travel experiences</li>
+                            <li className='text-justify'>Travel insurance for safe and secure trips</li>
+                            <li className='text-justify'>Visa assistance for hassle-free international travel</li>
+                            <li className='text-justify'>Customized holiday and vacation packages</li>
+                        </ul>
+                        <p className='text-center  text-sm sm:text-base text-gray-600 p-1 sm:p-2 md:p-3'>Our platform is built to offer flexibility, choice, and efficiency—all in one place.</p>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto px-3   '>
                         <div className='p-1 sm:p-2 md:p-3'>

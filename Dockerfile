@@ -14,4 +14,4 @@ EXPOSE 5173
 
 
 
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "dev"]

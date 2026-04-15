@@ -3,14 +3,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/pagination'
 import { Autoplay, Pagination } from "swiper/modules";
+import { NavLink } from "react-router-dom";
 
 export default function PremiumSpecials() {
   return (
     <section className="relative max-w-7xl mx-auto px-4 py-14">
       
-      <h2 className="text-2xl font-semibold py-6">
-        Global Traval  Specials
+      <h2 className="text-xl sm:text-2xl md:text-3xl text-fuchsia-700 text-center font-semibold py-6">
+        Global Travel Specials – Best Deals on Flights, Hotels & Holiday Packages
       </h2>
+      <p className="py-3 max-w-3xl mx-auto text-center text-base ">Discover handpicked travel deals designed for every kind of journey. From spiritual destinations across India to international getaways, explore seamless options for flights, hotels, car rentals, and complete holiday packages—all in one place.</p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
 
@@ -23,17 +25,17 @@ export default function PremiumSpecials() {
 
           <div className="absolute inset-0 p-4 flex flex-col justify-between text-white  bg-white/10">
             <div>
-              <h3 className="font-semibold text-lg text-shadow-amber-300 text-shadow-2xs">
-                Your Spiritual Journey Starts Here
+              <h3 className="font-semibold text-lg text-shadow-black text-shadow-2xs">
+               Spiritual Tours in India
               </h3>
-              <p className="text-sm opacity-90">
-                Explore divine destinations in India
+              <p className="text-sm opacity-90  text-shadow-black text-shadow-2xs">
+                Explore sacred destinations like Varanasi, Kedarnath, and Tirupati with customized travel packages designed for a peaceful and meaningful journey.
               </p>
             </div>
 
-            <button className="bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm hover:bg-yellow-400 hover:text-black transition">
+            <NavLink to="/packages" className="bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm hover:bg-yellow-400 hover:text-black transition">
               View More →
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -85,15 +87,16 @@ export default function PremiumSpecials() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
           <div className="absolute inset-0 p-4 flex flex-col justify-between text-white  bg-white/10">
             <div>
-              <h3 className="text-lg font-semibold text-shadow-amber-300 text-shadow-2xs">
-               Tour Packages
+              <h3 className="text-xl font-semibold text-shadow-black text-shadow-2xs">
+              Holiday Packages
               </h3>
+              <p className="py-3 text-sm  text-shadow-black text-shadow-2xs font-semibold">Choose from customized holiday packages for families, couples, and solo travelers with complete travel planning.</p>
               
             </div>
 
-            <button className="bg-white/20 px-4 py-1 rounded-full hover:bg-yellow-400 hover:text-black transition">
+            <NavLink to={'/packages'} className="bg-white/20 px-4 py-1 rounded-full hover:bg-yellow-400 hover:text-black transition">
               View More →
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -102,18 +105,25 @@ export default function PremiumSpecials() {
           {
             title: "Build Your Own Itinerary",
             img: "/images/Build Your Own Itinerary.jpg.jpeg",
+            path:"/contact-us"
           },
           {
-            title: "Looking for Hotels?",
+            title: "Hotel Booking Deals",
             img: "/images/Hotel.jpg.jpeg",
+            path:"/hotels",
+            "desc":"Book budget to luxury hotels worldwide with best price assurance and comfortable stays."
           },
           {
-            title: "Looking for Flights?",
+            title: "Flight Deals (Domestic & International)",
             img: "/images/flight.jpg.jpeg",
+            path:"/flights",
+            desc:"Find affordable flight tickets with flexible options and exclusive deals for both domestic and international travel"
           },
           {
-            title: "Looking for Cars?",
+            title: "Car Rentals & Transfers",
             img: "/images/car.jpg.jpeg",
+            path:"/cars",
+            desc:"Enjoy hassle-free travel with reliable car rental services and airport transfers at your destination."
           },
           
         ].map((item, i) => (
@@ -124,11 +134,13 @@ export default function PremiumSpecials() {
             />
  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
 
-            <div className="absolute inset-0 p-4 flex items-end text-white  bg-white/10">
-              <h3 className="text-sm font-semibold text-shadow-amber-300 text-shadow-2xs">
+            <NavLink to={item.path} className="absolute inset-0 p-4 flex items-start justify-between flex-1 flex-col text-white  bg-white/10">
+              <h3 className="text-sm text-white font-semibold text-shadow-black text-shadow-2xs">
                 {item.title}
               </h3>
-            </div>
+               <p className="py-3 text-lg  text-shadow-black text-shadow-2xs font-semibold">{item.desc}</p>
+              
+            </NavLink>
           </div>
         ))}
 

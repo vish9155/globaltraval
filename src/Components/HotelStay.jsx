@@ -59,11 +59,11 @@ export default function HotelStay() {
             <section className=' bg-gray-800/5 backdrop-blur-md shadow-xl shadow-white rounded-2xl max-w-7xl mx-auto px-3 '>
                 <div className='max-w-6xl mx-auto px-3 py-10 '>
                    <div className='max-w-7xl mx-auto px-4 mb-10'>
-        <h2 className='text-3xl md:text-4xl font-bold text-black flex gap-2'>
-          <HotelIcon size={33} className='mt-1'/> Luxury Hotel Stays
+        <h2 className='text-3xl md:text-4xl font-bold text-fuchsia-700 flex gap-2'>
+          <HotelIcon size={33} className='mt-1'/> Luxury Hotel Stays & Premium Accommodation Worldwide
         </h2>
-        <p className='text-gray-900 text-sm mt-2'>
-          Handpicked premium hotels for unforgettable experiences
+        <p className='text-gray-900 text-base  mt-4'>
+          Handpicked luxury hotels and premium stays across top destinations, offering comfort, elegance, and unforgettable travel experiences.
         </p>
       </div>
                     <div className='p-3'>

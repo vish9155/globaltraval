@@ -5,72 +5,72 @@ export default function OurServices() {
 
  let services = [
   {
-    title: "Flight Booking",
-    description: "Book domestic and international flights easily with best fares, flexible options, instant confirmations, and smooth booking experience designed for comfort, convenience, and stress-free travel planning.",
+    title: "Flight Booking – Cheap Domestic & International Flights",
+    description: "Book domestic and international flights with ease at competitive prices. Enjoy flexible options, instant confirmations, and a seamless booking experience designed for convenient and stress-free travel planning.",
     icon: "Plane",
     color: "text-sky-500",
     bg: "bg-sky-500/10",
     border: "from-sky-500 to-blue-600"
   },
   {
-    title: "Hotel Reservation",
-    description: "Discover and book top-rated hotels worldwide with affordable pricing, premium comfort, flexible options, and seamless booking experience ensuring relaxing stays for every type of traveler.",
+    title: "Hotel Reservation – Affordable Hotels Worldwide",
+    description: "Find and book top-rated hotels across the globe with the best deals. From budget stays to luxury accommodations, enjoy comfort, flexibility, and a smooth reservation experience for every trip.",
     icon: "Hotel",
     color: "text-rose-500",
     bg: "bg-rose-500/10",
     border: "from-rose-500 to-pink-600"
   },
   {
-    title: "Holiday Packages",
-    description: "Choose customized holiday packages designed for families, couples, and solo travelers including stays, transport, activities, and guided experiences for memorable and stress-free travel journeys.",
+    title: "Holiday Packages – Customized Vacation Deals",
+    description: "Explore customized holiday packages designed for families, couples, and solo travelers. Get complete travel solutions including stays, transport, and activities for a hassle-free vacation experience.",
     icon: "Package",
     color: "text-amber-500",
     bg: "bg-amber-500/10",
     border: "from-amber-500 to-orange-600"
   },
   {
-    title: "Cruise Booking",
-    description: "Enjoy luxury cruise experiences with world-class facilities, fine dining, entertainment, and breathtaking ocean views, offering unforgettable journeys across beautiful destinations with premium comfort and service.",
+    title: "Cruise Booking – Luxury Cruise Travel Experience",
+    description: "Discover premium cruise journeys with world-class amenities, dining, and entertainment. Enjoy unforgettable experiences across stunning destinations with complete comfort and service.",
     icon: "Ship",
     color: "text-cyan-500",
     bg: "bg-cyan-500/10",
     border: "from-cyan-500 to-blue-600"
   },
   {
-    title: "Tour Guide",
-    description: "Explore destinations with experienced local guides who provide cultural insights, historical knowledge, and personalized tours, making your journey more engaging, informative, and truly unforgettable.",
+    title: "Tour Guide – Local Travel Guides & Experiences",
+    description: "Enhance your journey with experienced local tour guides offering cultural insights and personalized experiences. Make your trip more engaging, informative, and memorable.",
     icon: "Map",
     color: "text-green-500",
     bg: "bg-green-500/10",
     border: "from-green-500 to-emerald-600"
   },
   {
-    title: "Visa Assistance",
-    description: "Get reliable visa assistance with complete guidance on documentation, application process, and approvals, ensuring a hassle-free and smooth experience for your international travel requirements.",
+    title: "Visa Assistance – Fast & Reliable Visa Services",
+    description: "Get expert visa assistance with complete support for documentation and application processes. Ensure a smooth and hassle-free experience for your international travel needs.",
     icon: "FileText",
     color: "text-indigo-500",
     bg: "bg-indigo-500/10",
     border: "from-indigo-500 to-purple-600"
   },
   {
-    title: "Travel Insurance",
-    description: "Secure your trips with comprehensive travel insurance covering medical emergencies, cancellations, delays, and unexpected issues, ensuring complete safety, protection, and peace of mind throughout your journey.",
+    title: "Travel Insurance – Secure & Reliable Coverage",
+    description: "Protect your journey with comprehensive travel insurance covering medical emergencies, trip cancellations, and unexpected events—ensuring peace of mind throughout your trip.",
     icon: "ShieldCheck",
     color: "text-teal-500",
     bg: "bg-teal-500/10",
     border: "from-teal-500 to-green-600"
   },
   {
-    title: "Car Rentals",
-    description: "Rent affordable and reliable cars at your destination with flexible options, easy booking, and comfortable travel experience, allowing you to explore cities conveniently at your own pace.",
+    title: "Car Rentals – Affordable & Flexible Car Hire",
+    description: "Rent reliable and affordable cars at your destination with flexible options. Enjoy comfortable and convenient travel while exploring cities at your own pace.",
     icon: "Car",
     color: "text-yellow-500",
     bg: "bg-yellow-500/10",
     border: "from-yellow-500 to-orange-500"
   },
   {
-    title: "24/7 Support",
-    description: "Our dedicated support team is available 24/7 to assist with bookings, queries, and emergencies, ensuring a smooth, reliable, and worry-free travel experience anytime and anywhere.",
+    title: "24/7 Support – Travel Assistance Anytime",
+    description: "Our dedicated support team is available 24/7 to assist with bookings, changes, and travel queries—ensuring a smooth and worry-free experience anytime, anywhere.",
     icon: "Headphones",
     color: "text-red-500",
     bg: "bg-red-500/10",
@@ -81,7 +81,7 @@ export default function OurServices() {
   return (
     <section className='max-w-7xl mx-auto px-4 py-16'>
 
-      <h2 className='text-center text-3xl md:text-4xl font-bold mb-12'>
+      <h2 className='text-center text-3xl md:text-4xl font-bold mb-12 text-fuchsia-700'>
          Our Services
       </h2>
 
