@@ -14,23 +14,23 @@ export default function PrivacyPolicy() {
             </p>
 
             <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-              Privacy Policy
+            PRIVACY POLICY - Global Travel Holdings LLC
             </h1>
 
             <p className="mt-4 text-sm sm:text-base text-gray-600 max-w-3xl leading-7">
-              At Global Travel, we value your trust and are committed to
-              protecting your personal information. This Privacy Policy explains
-              how we collect, use, store, and protect your data when you use our
-              website, services, and booking platform for flights, hotels, car
-              rentals, and cruise reservations.
+             At <b>Global Travel Holdings LLC,</b> we are committed to safeguarding your personal information and ensuring complete transparency in how your data is collected, used, and protected. In today’s digital environment, privacy is not just a requirement—it is a responsibility we take seriously as part of delivering a secure and trustworthy travel booking experience.
+            </p>
+           <p className="mt-4 text-sm sm:text-base text-gray-600 max-w-3xl leading-7">This Privacy Policy explains how we collect, process, store, and protect your information when you interact with our website, services, and customer support systems. Whether you are booking flights, hotels, cruises, car rentals, or travel packages, we ensure that your personal data is handled with the highest standards of security and confidentiality.</p>
+           <p className="mt-4 text-sm sm:text-base text-gray-600 max-w-3xl leading-7">
+            By accessing or using our website, you agree to the practices described in this policy. We encourage users to review this page carefully to understand their rights and how their information is managed.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
               <span className="rounded-full bg-gray-100 px-4 py-2 text-gray-700">
-                Effective Date: 31 March 2026
+                Effective Date: 31 April 2026
               </span>
               <span className="rounded-full bg-gray-100 px-4 py-2 text-gray-700">
-                Last Updated: 31 March 2026
+                Last Updated: 31 April 2026
               </span>
             </div>
           </div>
@@ -42,113 +42,114 @@ export default function PrivacyPolicy() {
           <div className="lg:col-span-2 space-y-6">
             <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                1. Information We Collect
+                1.Personal Information
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                When you use Global Travel, we may collect personal information
-                such as your full name, email address, phone number, billing
-                address, travel preferences, passport details where required,
-                and payment-related information. We may also collect technical
-                information such as your IP address, browser type, device
-                information, and browsing activity on our platform to improve
-                your user experience and platform performance.
+              We may collect personal details that you voluntarily provide, including:
               </p>
+              <ul className="pl-8 list-disc">
+                <li>Full name, email address, and phone number</li>
+                <li>Billing and payment information</li>
+                <li>Travel details such as destinations, dates, and preferences</li>
+                <li>Identification details required for bookings</li>
+               
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                2. Automatically Collected Information
+              </h2>
+             <ul className="pl-8 list-disc">
+              <li>IP address and device type</li>
+              <li>Browser type and operating system</li>
+              <li>Pages visited and time spent on the website</li>
+             </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                3.How We Use Your Information
+              </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                This information may be collected when you make a booking,
-                create an account, contact support, subscribe to updates, or
-                interact with our website in any way.
+                  Your information may be used to:
+              </p>
+              <ul className="pl-8 list-disc">
+                <li>Process and manage bookings
+</li>
+                <li>Communicate confirmations, updates, and notifications</li>
+                <li>Provide customer support and resolve queries</li>
+                <li>Improve website performance and user experience</li>
+                <li>Send promotional offers (only if opted in)</li>
+                <li>Detect and prevent fraud or unauthorized activity</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                4. Data Retention
+              </h2>
+              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
+               We retain your information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
               </p>
             </div>
 
             <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                2. How We Use Your Information
+                5. Sharing & Disclosure
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                We use your information to process bookings, confirm payments,
-                send travel updates, provide customer support, and improve our
-                services. Your data also helps us personalize your booking
-                experience, recommend relevant travel options, and maintain the
-                security of our platform.
+               We may share your data with:
               </p>
+              <ul className="list-disc pl-8">
+                <li>Airlines, hotels, and travel partners</li>
+                <li>Payment processors and service providers</li>
+                <li>Government or legal authorities when required</li>
+                
+              </ul>
+              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">All third parties are obligated to keep your information secure.</p>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                6. Data Security Measures
+              </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                In some cases, we may use your email or phone number to send
-                booking confirmations, cancellation notices, itinerary details,
-                security alerts, service-related updates, or promotional offers.
-                You may opt out of promotional messages at any time.
+                We use industry-standard security practices such as encryption, secure servers, and restricted access to protect your personal information.
               </p>
             </div>
 
             <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                3. Sharing of Information
+                7. Cookies & Tracking Technologies
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                Global Travel does not sell your personal information. However,
-                we may share necessary data with trusted third-party travel
-                partners such as airlines, hotels, car rental providers, cruise
-                operators, payment gateways, and verification service providers
-                only to complete your booking and provide requested services.
+               We use cookies to:
               </p>
-              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                We may also disclose information when required by law, legal
-                process, fraud prevention measures, or to protect the rights,
-                property, and safety of our users and business.
-              </p>
+              <ul className="pl-8 list-disc">
+                <li>Enhance website functionality</li>
+                <li>Analyze user behavior</li>
+                <li>	Improve services</li>
+              </ul>
+              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">You can disable cookies through your browser settings.</p>
             </div>
-
             <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                4. Data Security
+                7. Children’s Privacy
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                We use reasonable technical and organizational safeguards to
-                protect your data from unauthorized access, misuse, loss, or
-                disclosure. This includes secure servers, encrypted payment
-                handling, and restricted access to sensitive information.
-                Although we take strong precautions, no online platform can
-                guarantee absolute security, so users should also take
-                appropriate steps to protect their login credentials and devices.
+              Our services are not intended for individuals under the age of 18. We do not knowingly collect data from minors.
               </p>
+             
             </div>
-
-            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                5. Cookies and Tracking
-              </h2>
-              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                Our website may use cookies and similar technologies to improve
-                functionality, remember preferences, analyze traffic, and
-                deliver a smoother browsing experience. By continuing to use our
-                website, you agree to the use of such technologies unless you
-                disable them through your browser settings.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-                6. Your Rights
-              </h2>
-              <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                You may request access to the personal information we hold about
-                you, ask for corrections, request deletion where legally
-                permitted, or contact us about any concerns regarding your data.
-                We will respond within a reasonable timeframe in accordance with
-                applicable laws and internal policies.
-              </p>
-            </div>
-
             <div className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                 7. Policy Updates
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                Global Travel may update this Privacy Policy from time to time
-                to reflect legal, operational, or service-related changes. Any
-                updates will be posted on this page with the revised effective
-                date. Continued use of our services after such updates means you
-                accept the updated policy.
+              We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated effective date.
               </p>
+             
             </div>
           </div>
 
@@ -165,7 +166,7 @@ export default function PrivacyPolicy() {
                 <div className="rounded-xl bg-gray-50 p-4 border border-gray-200">
                   <p className="text-xs text-gray-500">Email</p>
                   <p className="text-sm sm:text-base font-medium text-gray-800 break-all">
-                    support@globaltravel.com
+                   support@globaltravelholdings.com
                   </p>
                 </div>
 
@@ -179,13 +180,15 @@ export default function PrivacyPolicy() {
                 <div className="rounded-xl bg-gray-50 p-4 border border-gray-200">
                   <p className="text-xs text-gray-500">Office Address</p>
                   <p className="text-sm sm:text-base font-medium text-gray-800 leading-6">
-                    Global Travel Pvt. Ltd.
+                   Global Travel Holdings LLC
+
+
                     <br />
-                    2nd Floor, Business Tower,
+                   16192 Coastal Highway,
+
                     <br />
-                    Connaught Place, New Delhi,
-                    <br />
-                    India - 110001
+                   Lewes, Delaware 19958, USA
+            
                   </p>
                 </div>
               </div>

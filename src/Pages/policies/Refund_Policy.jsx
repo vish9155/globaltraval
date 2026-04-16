@@ -15,16 +15,16 @@ export default function RefundPolicy() {
             </p>
 
             <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
-              Refund Policy
+            Refund Policy : Global Travel Holdings LLC   
             </h1>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
-              At Global Travel, we strive to provide a smooth and transparent booking experience. This Refund Policy outlines how cancellations and refunds are handled across flights, hotels, car rentals, and cruise bookings made through our platform.
+    At Global Travel Holdings LLC, we understand that travel plans may change due to unforeseen circumstances. Our Refund Policy is designed to provide clarity and transparency regarding eligibility, timelines, and conditions under which refunds are processed.
             </p>
-
+ <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">Refunds depend on multiple factors, including the type of booking, cancellation timing, and the policies of airlines, hotels, or third-party service providers. We strive to ensure that all refund requests are handled fairly, efficiently, and in accordance with applicable terms.</p>
             <div className="mt-5 flex gap-3 flex-wrap text-sm">
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 March 2026</span>
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 March 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 April 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 April 2026</span>
             </div>
           </div>
         </div>
@@ -36,44 +36,52 @@ export default function RefundPolicy() {
           <div className="lg:col-span-2 space-y-6">
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">1. Cancellation Policy</h2>
+              <h2 className="text-xl font-bold">1. General Conditions</h2>
+              <ul>
+                <li>	Refunds depend on third-party provider policies</li>
+                <li>	Processing time varies based on payment method</li>
+                <li> 	Service fees may not be refundable</li>
+           
+              </ul>
+            </div>
+
+            <div className="bg-white border rounded-2xl p-6 shadow-sm">
+              <h2 className="text-xl font-bold">2. Partial Refunds</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                All bookings made through Global Travel are subject to cancellation policies of the respective service providers including airlines, hotels, car rental companies, and cruise operators. Cancellation eligibility, fees, and timelines vary depending on the selected service and fare type at the time of booking.
+               In some cases, partial refunds may be issued depending on cancellation timing and provider rules.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">2. Refund Eligibility</h2>
+              <h2 className="text-xl font-bold">3.No Refund Situations</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Refund eligibility depends on the provider’s terms and conditions. Some bookings may be non-refundable, while others may allow partial or full refunds based on cancellation timing. Users are advised to review cancellation rules before confirming any booking.
+              Refunds may not be applicable in cases such as:
+              </p>
+              <ul>
+                <li>	No-show bookings</li>
+                <li>Last-minute cancellations</li>
+                <li>Non-refundable fares</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border rounded-2xl p-6 shadow-sm">
+              <h2 className="text-xl font-bold">4. Processing Timeline</h2>
+              <p className="mt-3 text-gray-600 text-sm leading-7">
+               Refunds typically take 7 to 30 business days, depending on banks and service providers.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">3. Refund Processing Time</h2>
+              <h2 className="text-xl font-bold">5.Chargebacks</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Once a refund request is approved, the processing time typically ranges from 5 to 10 business days. However, the final timeline may vary depending on banks, payment gateways, and service providers involved in the transaction.
+                Unauthorized chargebacks may lead to account suspension or legal action.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">4. Non-Refundable Charges</h2>
+              <h2 className="text-xl font-bold">6. Refund Communication</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Certain charges such as convenience fees, service fees, and transaction charges are generally non-refundable. These charges may be deducted from the refund amount even if the booking is eligible for cancellation.
-              </p>
-            </div>
-
-            <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">5. Provider-Based Policies</h2>
-              <p className="mt-3 text-gray-600 text-sm leading-7">
-                Since Global Travel acts as an intermediary, refund decisions are governed by third-party providers. In case of flight cancellations by airlines or service disruptions, customers may be eligible for full refunds or rebooking options as per provider rules.
-              </p>
-            </div>
-
-            <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">6. Special Cases</h2>
-              <p className="mt-3 text-gray-600 text-sm leading-7">
-                In exceptional situations such as natural disasters, medical emergencies, or government restrictions, refund decisions may be handled differently depending on service providers. We recommend contacting our support team for assistance in such cases.
+               All refund requests must be submitted via email with complete booking details.
               </p>
             </div>
 
@@ -89,9 +97,9 @@ export default function RefundPolicy() {
               </p>
 
               <div className="mt-4 space-y-3 text-sm">
-                <p><b>Email:</b> support@globaltravel.com</p>
+                <p><b>Email:</b>support@globaltravelholdings.com</p>
                 <p><b>Phone:</b> +91 98765 43210</p>
-                <p><b>Address:</b> Connaught Place, New Delhi, India</p>
+                <p><b>Address:</b>  Global Travel Holdings LLC,16192 Coastal Highway, Lewes, Delaware, USA </p>
               </div>
             </div>
 

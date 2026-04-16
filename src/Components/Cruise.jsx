@@ -3,6 +3,7 @@ import React from 'react'
 import PopularCruiseLine from './PopularCruiseLine'
 import Testimonials from './Testimonials'
 import CruiseDestination from './CruiseDestination'
+import { NavLink } from 'react-router-dom'
 
 export default function Cruise() {
   return (
@@ -103,9 +104,81 @@ export default function Cruise() {
         </div>
 
       </section>
+
+<div className='max-w-6xl mx-auto px-3 py-10'>
+  <h1 className='text-xl sm:text-2xl md:text-3xl pt-5 py-4 font-semibold leading-3 text-fuchsia-700 text-center'>Book Cruise Online for Luxury & Relaxing Travel Experiences</h1>
+  <p className='p-2 sm:p-3 md:p-4 max-w-5xl text-base text-gray-600 mx-auto text-center'>
+Experience travel like never before with our <b>cruise booking online</b> platform. At Global Travel Holdings LLC, we help you explore the world through comfortable and well-planned cruise journeys. Whether you're looking for a relaxing getaway or a luxury vacation, we make it easy to find and book the perfect cruise.
+  </p>
+</div>
+
+           <section className='grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 max-w-7xl mx-auto px-3 py-5'>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Discover Cruise Vacations Worldwide</h2>
+                    <p className='py-3 text-base pl-3'>Explore a variety of <b>cruise vacations worldwide</b>, from tropical island escapes to scenic ocean journeys. Choose from multiple routes, durations, and cruise types that suit your travel preferences.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Book Cruise Deals at the Best Prices</h2>
+                    <p className='py-3 text-base pl-3'>Find exclusive <b>book cruise deals</b> and enjoy value-packed travel experiences. Our platform helps you compare options and choose from <b>affordable cruise deals</b> without compromising on comfort or quality.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Luxury Cruise Packages for Premium Travel</h2>
+                    <p className='pl-3 py-3 text-base'>Indulge in premium travel with our <b>luxury cruise packages designed for comfort</b>, entertainment, and unforgettable experiences. Enjoy world-class amenities, fine dining, and scenic views throughout your journey.</p>
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Easy & Secure Cruise Booking Process</h2>
+                    <p className='pl-3 py-3 text-base'>Our system ensures a smooth and secure booking experience. With simple steps and instant confirmations, you can complete your cruise reservation quickly and confidently.</p>
+                </div>
+
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Start Your Cruise Journey Today</h2>
+                    <p className='py-3 pl-3 text-base'>Plan your next cruise with Global Travel Holdings LLC and enjoy a seamless booking experience. Whether you're traveling for leisure or luxury, we help you create unforgettable moments on the sea.</p>
+                </div>
+             
+
+
+            </section>
+             <div className='py-10 mx-auto px-3 text-center'>
+                <NavLink to="tel:9155014125" className="px-8 py-3 bg-slate-900  text-center  text-white rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg">
+                        Book Now ?
+                          </NavLink>
+            </div>
       <PopularCruiseLine />
       <Testimonials />
+         <section className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-3 py-10'>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6' >
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Why Choose Global Travel Holdings LLC for Cruise Booking</h2>
+                    <ul className='pl-10 list-disc leading-relaxed p-6'>
+                        <li>Wide selection of cruise options worldwide</li>
+                        <li>	Competitive pricing and exclusive deals</li>
+                        <li>	Easy comparison of cruise packages</li>
+                        <li>Secure and reliable booking system</li>
+                        <li>	Dedicated customer support</li>
+                    </ul>
+
+                </div>
+                <div className='shadow-2xl z-50 rounded-2xl  shadow-gray-600 p-6'>
+                    <h2 className='text-xl sm:text-2xl md:text-2xl '>Tips to Choose the Right Cruise</h2>
+                    <ul className='pl-10 list-disc leading-relaxed py-4'>
+                        <li>Select destinations based on your travel interests</li>
+                        <li>Compare cruise duration and onboard facilities</li>
+                        <li>Book early for better availability and pricing</li>
+                        <li>Check inclusions like meals and entertainment</li>
+                        <li>Choose the right cabin type for comfort</li>
+                    </ul>
+                </div>
+            </section>
+             <div className='py-10 mx-auto px-3 text-center'>
+                <NavLink to="tel:9155014125" className="px-8 py-3 bg-slate-900  text-center  text-white rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg">
+                          Enquiry For Cruise Packages
+                          </NavLink>
+            </div>
       <CruiseDestination />
+       <div className='py-10 mx-auto px-3 text-center'>
+                <NavLink to="tel:9155014125" className="px-8 py-3 bg-slate-900  text-center  text-white rounded-full font-semibold hover:bg-amber-600 transition-colors shadow-lg">
+                         Book your favourite Cruise Destination
+                          </NavLink>
+            </div>
     </>
   )
 }

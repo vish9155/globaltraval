@@ -15,16 +15,19 @@ export default function TermsConditions() {
             </p>
 
             <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
-              Terms & Conditions
+           Terms & Conditions - Global Travel
             </h1>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
-              Welcome to Global Travel. By accessing and using our platform, you agree to comply with the following terms and conditions. These terms govern your use of our services including flight bookings, hotel reservations, car rentals, and cruise bookings.
+              Welcome to Global Travel Holdings LLC. These Terms & Conditions govern your use of our website, services, and booking platform. By accessing our website or making any booking, you agree to comply with the terms outlined below.
+            </p>
+            <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
+              Our goal is to provide a seamless, reliable, and transparent travel booking experience. These terms are designed to clearly define the responsibilities, rights, and obligations of both the user and Global Travel Holdings LLC. We strongly recommend reviewing these terms before proceeding with any transaction to ensure a clear understanding of our policies.
             </p>
 
             <div className="mt-5 flex gap-3 flex-wrap text-sm">
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 March 2026</span>
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 March 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 April 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 April 2026</span>
             </div>
           </div>
         </div>
@@ -36,51 +39,76 @@ export default function TermsConditions() {
           <div className="lg:col-span-2 space-y-6">
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">1. Acceptance of Terms</h2>
+              <h2 className="text-xl font-bold">1. Eligibility</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                By using Global Travel, you confirm that you have read, understood, and agreed to these terms. If you do not agree, you should not use our services.
+              You must be at least 18 years old and capable of entering into legally binding agreements to use our services.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">2. Booking and Payments</h2>
+              <h2 className="text-xl font-bold">2. Service Scope</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                All bookings are subject to availability and confirmation from third-party providers. You agree to provide accurate details while booking and complete payment using secure methods. Prices may change based on availability and demand.
+               We provide booking facilitation services for:
               </p>
+              <ul className="pl-8 list-disc">
+                <li>	Flights</li>
+                <li>Hotels</li>
+                <li>Car rentals</li>
+                <li>Cruises</li>
+                <li>Travel insurance</li>
+                <li>	Visa assistance</li>
+              </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">3. User Responsibilities</h2>
-              <p className="mt-3 text-gray-600 text-sm leading-7">
-                Users are responsible for providing correct personal information, travel documents, and complying with visa, passport, and local travel regulations. Any errors may lead to booking issues or cancellations.
-              </p>
+              <h2 className="text-xl font-bold">3.Pricing & Availability</h2>
+            <ul className="pl-8 list-disc">
+              <li>	Prices are subject to change without notice</li>
+              <li>Availability is not guaranteed until booking confirmation</li>
+              <li>Additional charges may apply based on service providers</li>
+            </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">4. Changes and Cancellations</h2>
-              <p className="mt-3 text-gray-600 text-sm leading-7">
-                Changes and cancellations are governed by the policies of airlines, hotels, and other service providers. Additional charges may apply based on fare rules and timing of the request.
-              </p>
+              <h2 className="text-xl font-bold">4. Cancellations & Modifications</h2>
+              <ul className="pl-8 list-disc">
+                <li>	Subject to provider policies</li>
+                <li>	Fees may apply for changes or cancellations</li>
+                <li>Some bookings may be non-refundable</li>
+              </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">5. Third-Party Services</h2>
-              <p className="mt-3 text-gray-600 text-sm leading-7">
-                Global Travel acts as an intermediary between users and service providers. We are not responsible for delays, cancellations, or service changes made by third parties.
-              </p>
+              <h2 className="text-xl font-bold">5. Payment Terms</h2>
+             <ul className="pl-8 list-disc">
+              <li>	Payments must be completed at the time of booking</li>
+              <li>We use secure third-party payment gateways</li>
+              <li>Failure in payment may result in booking cancellation</li>
+             </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">6. Limitation of Liability</h2>
+              <h2 className="text-xl font-bold">6. Prohibited Activities</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Global Travel shall not be liable for any direct or indirect damages, losses, or inconveniences caused due to service disruptions, delays, or external factors beyond our control.
+               Users must not:
               </p>
+              <ul className="pl-8 list-disc">
+                <li>	Provide false information</li>
+                <li>Use the website for fraudulent purposes</li>
+                <li>Attempt to harm or disrupt the platform</li>
+              </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">7. Policy Updates</h2>
+              <h2 className="text-xl font-bold">7. Force Majeure</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                We reserve the right to update or modify these terms at any time. Continued use of our platform indicates acceptance of updated terms.
+               We are not responsible for disruptions caused by events beyond our control, including natural disasters, pandemics, or government restrictions.
+              </p>Governing Law
+            </div>
+             <div className="bg-white border rounded-2xl p-6 shadow-sm">
+              <h2 className="text-xl font-bold">7. Governing Law</h2>
+              <p className="mt-3 text-gray-600 text-sm leading-7">
+               These terms are governed by the laws of the United States.
               </p>
             </div>
 
@@ -96,9 +124,11 @@ export default function TermsConditions() {
               </p>
 
               <div className="mt-4 space-y-3 text-sm">
-                <p><b>Email:</b> support@globaltravel.com</p>
+                <p><b>Email:</b>support@globaltravelholdings.com</p>
                 <p><b>Phone:</b> +91 98765 43210</p>
-                <p><b>Address:</b> Connaught Place, New Delhi, India</p>
+                <p><b>Address:</b> Global Travel Holdings LLC
+16192 Coastal Highway, Lewes, Delaware, USA
+</p>
               </div>
             </div>
 

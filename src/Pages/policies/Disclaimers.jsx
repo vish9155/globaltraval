@@ -15,16 +15,19 @@ export default function Disclaimer() {
             </p>
 
             <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
-              Disclaimer
+            DISCLAIMER : Global Travel Holdings LLC 
             </h1>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
-              Global Travel provides travel-related services including flights, hotels, car rentals, and cruise bookings through trusted third-party partners. This disclaimer outlines the limitations of our responsibility and the scope of services provided through our platform.
+           The information provided on the Global Travel Holdings LLC website is intended for general informational and booking purposes only. While we strive to ensure that all content, pricing, and travel details are accurate and up to date, we do not guarantee the completeness, reliability, or accuracy of all information at all times
+            </p>
+            <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
+              Travel-related information such as prices, availability, schedules, and policies may change without prior notice due to factors beyond our control. By using our website, you acknowledge and accept that Global Travel Holdings LLC is not liable for any discrepancies, interruptions, or losses resulting from such changes.
             </p>
 
             <div className="mt-5 flex gap-3 flex-wrap text-sm">
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 March 2026</span>
-              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 March 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Effective Date: 31 April 2026</span>
+              <span className="bg-gray-100 px-4 py-2 rounded-full">Last Updated: 31 April  2026</span>
             </div>
           </div>
         </div>
@@ -36,44 +39,54 @@ export default function Disclaimer() {
           <div className="lg:col-span-2 space-y-6">
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">1. General Information</h2>
+              <h2 className="text-xl font-bold">1. Service Disclaimer</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                All information provided on Global Travel is for general informational purposes only. While we strive to keep all details accurate and updated, we do not guarantee completeness, reliability, or accuracy of the information available on our platform.
+              We act solely as an intermediary between customers and service providers. We do not operate airlines, hotels, or transport services.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">2. Third-Party Services</h2>
+              <h2 className="text-xl font-bold">2.No Guarantees</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Global Travel acts as an intermediary between users and third-party service providers such as airlines, hotels, car rental companies, and cruise operators. We are not responsible for the quality, availability, or performance of services provided by these external partners.
+               We do not guarantee:
               </p>
+              <ul className="pl-5 list-disc">
+                <li>	Visa approvals</li>
+                <li>	Availability of services</li>
+                <li>Accuracy of third-party information</li>
+              </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">3. Pricing and Availability</h2>
+              <h2 className="text-xl font-bold">3. Pricing Disclaimer</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Prices and availability of travel services are subject to change without prior notice. We do not guarantee that displayed prices will remain valid at the time of booking due to dynamic pricing by service providers.
+                Prices displayed on the website are subject to change and may vary at the time of booking.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-bold">4. Travel Risks</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Travel involves inherent risks including delays, cancellations, weather conditions, and other unforeseen events. Global Travel is not liable for any disruptions or losses caused by such factors beyond our control.
+                Travel involves inherent risks, including delays, cancellations, and unforeseen circumstances. Users are responsible for understanding these risks.
               </p>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">5. No Warranty</h2>
+              <h2 className="text-xl font-bold">5.Limitation of Liability</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                We do not provide any warranties regarding uninterrupted access, error-free services, or guaranteed outcomes. Users access and use our platform at their own risk.
+              We shall not be held liable for:
               </p>
+              <ul className="pl-5 list-disc">
+                <li>Indirect or incidental damages</li>
+                <li>Loss of bookings or travel disruptions</li>
+                <li>Third-party service failures</li>
+              </ul>
             </div>
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-bold">6. Limitation of Liability</h2>
+              <h2 className="text-xl font-bold">6. User Responsibility</h2>
               <p className="mt-3 text-gray-600 text-sm leading-7">
-                Global Travel shall not be held liable for any direct, indirect, or incidental damages arising from the use of our services, including booking errors, cancellations, or service failures by third-party providers.
+              Users must verify all details before booking, including travel documents, visa requirements, and policies.
               </p>
             </div>
 
@@ -89,16 +102,16 @@ export default function Disclaimer() {
               </p>
 
               <div className="mt-4 space-y-3 text-sm">
-                <p><b>Email:</b> support@globaltravel.com</p>
+                <p><b>Email:</b>support@globaltravelholdings.com</p>
                 <p><b>Phone:</b> +91 98765 43210</p>
-                <p><b>Address:</b> Connaught Place, New Delhi, India</p>
+                <p><b>Address:</b> Global Travel Holdings LLC,16192 Coastal Highway, Lewes, Delaware, USA</p>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-yellow-500 to-amber-500 text-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-lg">Important Notice</h3>
+              <h3 className="font-bold text-lg">Updates</h3>
               <p className="mt-2 text-sm">
-                By using Global Travel, you acknowledge that you understand and agree to this disclaimer and accept all associated risks.
+               This disclaimer may be updated without prior notice..
               </p>
             </div>
 
